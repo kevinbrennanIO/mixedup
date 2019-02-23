@@ -1,0 +1,27 @@
+{
+  "name": "mixedup",
+  "version": "1.0.0",
+  "description": "Mixed Up team project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinbrennanIO/mixedup.git"
+  },
+  "keywords": [
+    "mixedup"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinbrennanIO/mixedup/issues"
+  },
+  "homepage": "https://github.com/kevinbrennanIO/mixedup#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongodb": "^3.1.13",
+    "mysql": "^2.16.0"
+  }
+}
