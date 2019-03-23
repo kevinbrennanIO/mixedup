@@ -3,11 +3,11 @@
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         //is signed in
-        window.alert("You're in!!");
+        console.log("You're in!!");
         //window.location.href = "home.html";
     } else {
         //no user signed in
-        window.alert("Sorry!!!");
+        console.log("You're Gone!!");
     }
 });
 
@@ -16,25 +16,24 @@ function login(){
     //get the entered email and password
     var userEmail = document.getElementById("inputEmail").value;
     var userPass = document.getElementById("inputPassword").value; 
+
     firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;  
 
-    });
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
 
+            window.alert("Error: " + error.message);
+
+        });
+    //redirect after login
+    window.location = "home.html";
 }
 
-//handle account status
-firebase.auth().onAuthStateChanged(user => {
-    if(user){
-        window.location = "home.html";
-    }
-});
-
-//log out
+//log out -- UNFINISHED!!!
 function logout(){
     firebase.auth().signOut();
+    window.location = "index.html";
 }
 
 //redirect to signup form
@@ -46,11 +45,14 @@ function gotoform(){
 function signup(){
     var userEmail = document.getElementById("inputEmail").value;
     var userPass = document.getElementById("inputPassword").value;
-    firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+
+    firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
-        var errorMessage = error.message;        
+        var errorMessage = error.message;  
+        
         window.alert("Error: " + error.message);
       });
-
-      }
+      //redirect after signup
+      window.location = "home.html";
+    }
