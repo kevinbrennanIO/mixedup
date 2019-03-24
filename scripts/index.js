@@ -7,11 +7,17 @@ const path  = require('path');
 const VIEWS = path.join(__dirname, 'views');
 app.use(express.static("style"));
 app.use(express.static("images"));
+app.use(express.static("scripts"));
+app.use(express.static("css"));
 app.set("view engine", "ejs");
+var mysql = require('mysql');
+const http = require('http');
 
-// set up simple hello world application using the request and response function
+
+
+// set up link to home page
 app.get('/', function(req, res) {
-res.send("Hello World"); // we set the response to send back the string hello world
+    res.sendFile('home.html', { root: ('..') }); // we set the response to send back the string hello world
 console.log("Site was acceesed"); // used to output activity in the console
 });
 
