@@ -5,7 +5,20 @@
 body {
     padding-top: 3rem;
     padding-bottom: 3rem;
+    background-image: url("bg-main.png") !important;
   }
+
+.footer-widget ul li a{
+  color: black !important;
+  
+}
+.footer-widget ul li a:hover { 
+  color: salmon !important;
+}
+
+a.nav-link:hover{
+  color: salmon !important;
+}
 
 .logo {
     width: 150px !important;
@@ -23,6 +36,7 @@ a.nav-link {
     color: black !important;
 }
 
+
 .button {
     background-color: rgb(172, 221, 107) !important;
     border: none !important;
@@ -39,6 +53,13 @@ a.nav-link {
   .carousel-caption {
     bottom: 3rem;
     z-index: 10;
+  }
+
+  h1.quote-style {
+    color: gray;
+  }
+  .quote-style {
+    color: #011c28;
   }
   
   /* Declare heights because of positioning of img element */
@@ -104,10 +125,11 @@ hr {
 
 .btn {
   font-size: 16px; 
+  color: white;
   font-weight: 700; 
   padding: 12px 24px; 
   letter-spacing: 0px; 
-  border-radius: 3px; 
+  border-radius: 50px; 
   line-height: 2; 
   -webkit-transition: all 0.5s; 
   -moz-transition: all 0.5s; 
@@ -116,6 +138,7 @@ hr {
   white-space: normal !important; 
   background-color: rgb(172, 221, 107);
   border: none;
+  background-color: #011c28;
 }
 
 .btn-default:hover { 

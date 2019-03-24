@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mixed Up | The Cocktail Application</title>
+
+    <!-- Bootstrap Stylesheet-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Main Stylesheet-->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Stylesheet-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="scripts/index.js"></script>
+    <script src="scripts/firebase.js"></script>
+
+    <!--FIREBASE-->
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: process.env.API_KEY,
+        authDomain: process.env.AUTH_DOMAIN,
+        databaseURL: process.env.DATABASE_URL,
+        projectId: process.env.PROJECT_ID,
+        storageBucket: process.env.STORAGE_BUCKET,
+        messagingSenderId: process.env.MESSAGE_SENDER_ID
+      };
+      firebase.initializeApp(config);
+    </script>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-light">
+          <a class="navbar-brand" href="#"><img class="logo" src="main-logo.png" alt="main-logo"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Top Picks</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Cocktail Finder</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Random Cocktail</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Games</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Store (Coming Soon)</a>
+              </li>
+            </ul>
+            <form class="form-inline mt-2 mt-md-0">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="logout()">Log out</button>
+            </form>
+          </div>
+        </nav>
+      </header>
+  
+      <main role="main">
+  
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="first-slide" style="background-color: #FBDA61; background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);" alt="First slide">
+              <div class="container">
+                <div class="carousel-caption text-left">
+                  <h1 class="quote-style">Wisdom...</h1>
+                  <p class="quote-style">"This is where the body of the quote will go once linked to MongoDB"</p>
+                  <p class="quote-style"><i>- Author</i></p>
+                  <p><a class="btn btn-lg btn-primary" onClick="window.location.reload()" role="button">Another Quote</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="second-slide" style="background-color: #FBDA61; background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);" alt="Second slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Sing it :)</h1>
+                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <p><a class="btn btn-lg btn-primary" onClick="window.location.reload()" role="button">Another Quote</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="third-slide" style="background-color: #FBDA61; background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);" alt="Third slide">
+
+              <div class="container">
+                <div class="carousel-caption text-right">
+                  <h1>Amen!!</h1>
+                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <p><a class="btn btn-lg btn-primary" onClick="window.location.reload()" role="button">Another Quote</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+  
+  
+        <!-- Marketing messaging and featurettes
+        ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+  
+        <div class="container marketing">
+  
+          <!-- START THE FEATURETTES -->
+  
+          <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading"><span class="text-bg">Ingredient Playground | </span><span class="text-muted">See for yourself</span></h2>
+                <p class="lead">Leave the tricky stuff to us, simply enter some of the ingredients you already have lying around and we'll suggest some delicious drink for you to concoct.</p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto" src="ingredients.jpg" alt="cocktail-image">
+            </div>
+          </div>
+  
+          <hr class="featurette-divider">
+  
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Specially Selected | <span class="text-muted">Our favourite cocktails</span></h2>
+                <p class="lead">A selection of our all-time favourite cocktails. Regardless of the occassion, guaranteed to have something that everyone will enjoy.</p> 
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img class="featurette-image img-fluid mx-auto" src="ingredients.jpg" alt="cocktail-image">
+            </div>
+          </div>
+  
+          <hr class="featurette-divider">
+  
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">Random Cocktail Generator | <span class="text-muted">You feel'n lucky?</span></h2>
+              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto" src="ingredients.jpg" alt="cocktail-image">
+            </div>
+          </div>
+  
+          <hr class="featurette-divider">
+          <br><br>
+  
+          <!-- /END THE FEATURETTES -->
+  
+        </div><!-- /.container -->
+  
+  
+        <!-- FOOTER -->
+        <div class="footer">
+          <div class="container">
+              <div class="row ">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                      <div class="ft-logo"><img class="footer-logo" src="main-logo.png" alt=""></div>
+                  </div>
+              </div>
+              <hr class="footer-line">
+              <div class="row ">
+                  <!-- footer-about -->
+                  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 ">
+                      <div class="footer-widget ">
+                          <div class="footer-title">Company</div>
+                          <ul class="list-unstyled">
+                              <li><a href="#">About</a></li>
+                              <li><a href="#">Support</a></li>
+                              <li><a href="#">Press</a></li>
+                              <li><a href="#">Legal & Privacy</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <!-- /.footer-about -->
+                  <!-- footer-links -->
+                  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 ">
+                      <div class="footer-widget ">
+                          <div class="footer-title">Quick Links</div>
+                          <ul class="list-unstyled">
+                              <li><a href="#">News</a></li>
+                              <li><a href="#">Contact us</a></li>
+                              <li><a href="#">FAQ</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <!-- /.footer-links -->
+                  <!-- footer-links -->
+                  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 ">
+                      <div class="footer-widget ">
+                          <div class="footer-title">Social</div>
+                          <ul class="list-unstyled">
+                              <li><a href="https://www.twitter.com">Twitter</a></li>
+                              <li><a href="https://www.facebook.com">Facebook</a></li>
+                              <li><a href="https://www.instagram.com">Instagram</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <!-- /.footer-links -->
+                  <!-- footer-links -->
+                  <!-- /.footer-links -->
+                  <!-- tiny-footer -->
+              </div>
+              <div class="row ">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center ">
+                      <div class="tiny-footer">
+                          <p>Copyright © All Rights Reserved Mixed Up 2019</p>
+                      </div>
+                  </div>
+                  <!-- /. tiny-footer -->
+              </div>
+          </div>
+      </div>
+        
+
+
+
+      </main>
+
+
+
+<!-- Bootstrap Dependencies-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 html,
 body {
   height: 100%;
-  background-image: url("../images/bg-main.png");
+  background-image: url("bg-main.png");
 }
 
 body {
@@ -55,6 +55,7 @@ body {
 .button-main {
     background-color: rgb(172, 221, 107) !important;
     border: none;
+    margin-bottom: 5px;
 }
 
 .conditions {
