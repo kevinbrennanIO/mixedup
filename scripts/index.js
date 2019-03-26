@@ -1,22 +1,42 @@
 
-var express = require("express"); // call the express module which is default provided by Node
 
-var app = express(); // now we need to declare our app which is the invoked express application
+const app = document.getElementById('root');
 
-const path  = require('path');
-const VIEWS = path.join(__dirname, 'views');
-app.use(express.static("style"));
-app.use(express.static("images"));
-app.set("view engine", "ejs");
+const container = document.createElement('div');
+container.setAttribute('class', 'container');
 
-// set up simple hello world application using the request and response function
-app.get('/', function(req, res) {
-res.send("Hello World"); // we set the response to send back the string hello world
-console.log("Site was acceesed"); // used to output activity in the console
-});
 
-// this code provides the server port for our application to run on
-app.listen(process.env.PORT || 4000, process.env.IP || "0.0.0.0", function() {
-console.log("Yippee its running");
-  
-});
+app.appendChild(container);
+
+var request = new XMLHttpRequest();
+request.open('GET', 'https://www.thecocktaildb.com/api/json/v1/1/random.php', true);
+request.send();
+request.onload = function () {
+
+  // Begin accessing JSON data here
+  var data = JSON.parse(this.response);
+    console.log(this.response);
+    console.log(data.drinks[0]["strDrink"]);
+   // window.alert(data["strDrink"])
+  if (request.status >= 200 && request.status < 400) {
+for (var i = 0; i < data.drinks.length; i++) {
+    // key here is the index of line array
+    container.innerHTML += "Drink Name: "+ data.drinks[i]["strDrink"]+ "Drink Type: " + data.drinks[i]["strAlcoholic"]+ "Glass Type: " +data.drinks[i]["strGlass"]+ "Instructions: " +data.drinks[i]["strInstructions"]+ "Ingredients: " +data.drinks[i]["strIngredient1"]+ data.drinks[i]["strIngredient2"]+ data.drinks[i]["strIngredient3"]+ data.drinks[i]["strIngredient4"]+ data.drinks[i]["strIngredient5"]+ data.drinks[i]["strIngredient6"]+ "Measures: " +data.drinks[i]["strMeasure1"]+ data.drinks[i]["strMeasure2"]+ data.drinks[i]["strMeasure3"]+ data.drinks[i]["strMeasure4"]+ data.drinks[i]["strMeasure5"];
+    
+    // each element of line array is an object
+    // so we can iterate over its properties
+}
+  } else {
+    const errorMessage = document.createElement('marquee');
+    errorMessage.textContent = 'Gah, its not working!';
+    app.appendChild(errorMessage);
+  }
+}
+
+
+
+
+
+
+
+
