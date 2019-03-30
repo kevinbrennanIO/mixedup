@@ -1,19 +1,28 @@
 
-var express = require("express"); // call the express module which is default provided by Node
+var express = require("express");              // call the express module which is default provided by Node
 
-var app = express(); // now we need to declare our app which is the invoked express application
+var app = express();                           // now we need to declare our app which is the invoked express application
 
+require('dotenv').config({ path: '/Users/kevinbrennan/Desktop/mixedup/vars.env' }); 
 const path  = require('path');
 const VIEWS = path.join(__dirname, 'views');
-app.use(express.static("style"));
+app.use(express.static("css"));
 app.use(express.static("images"));
 app.set("view engine", "ejs");
 
-// set up simple hello world application using the request and response function
+// direct application to the root page (index)
 app.get('/', function(req, res) {
-res.send("Hello World"); // we set the response to send back the string hello world
-console.log("Site was acceesed"); // used to output activity in the console
+    res.render("index",{ROOT: "views"}); 
+console.log("Site was acceesed");            
 });
+
+// direct application to the home page (home)
+app.get("/home", function(req, res) {
+    res.render("home",{ROOT: "views"}); 
+    console.log("/home was acceesed");  
+});
+
+
 
 // this code provides the server port for our application to run on
 app.listen(process.env.PORT || 4000, process.env.IP || "0.0.0.0", function() {

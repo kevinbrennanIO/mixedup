@@ -1,1 +1,5 @@
 .DS_Store
+.env
+vars.env
+.vars.env.swp
+node_modules
