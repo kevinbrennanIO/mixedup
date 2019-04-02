@@ -28,6 +28,12 @@ app.get("/home", function(req, res) {
     console.log("/home was acceesed");  
 });
 
+// direct application to the top picks page 
+app.get("/picks", function(req, res) {
+    res.render("picks",{ROOT: "views"}); 
+    console.log("/picks was acceesed");  
+});
+
 //MYSQL Connection
 console.log(process.env);
 var db = mysql.createConnection({
