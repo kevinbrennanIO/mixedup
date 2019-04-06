@@ -13,6 +13,7 @@ app.use(express.static("scripts"));
 
 var mysql = require('mysql');
 const http = require('http');
+const api_helper = require('./api')
 
 
 
@@ -28,8 +29,30 @@ app.get("/home", function(req, res) {
     console.log("/home was acceesed");  
 });
 
+// direct application to the home page (home)
+app.get("/drinks", function(req, res) {
+  res.render("drinks",{ROOT: "views"}); 
+  console.log("/drinks was acceesed");  
+});
+
+
+////////// API testing ///////////
+app.get('/api', (req, res) => {
+  api_helper.make_API_call('https://www.thecocktaildb.com/api/json/v2/8673533/filter.php?i=Dry_Vermouth,Gin,Anis')
+  .then(response => {
+    res.render("drinks",{ROOT: "views"}); 
+
+    var api_output = response
+    console.log(api_response);
+  })
+  .catch(error => {
+      res.send(error)
+  })
+})
+
+
+
 //MYSQL Connection
-console.log(process.env);
 var db = mysql.createConnection({
     host: process.env.GH_HOST,
     user: process.env.GH_USER,
@@ -40,7 +63,7 @@ db.connect(function (err) {
     if (!err) {
         console.log("[status] Connected to mySQL database ... \n");
     } else {
-        console.log("[status] Error connecting database ... ");
+        console.log("[status] Error connecting to SQL ... ");
     }
 });
 
@@ -86,8 +109,10 @@ app.get('/games', function (req, res) {
     });
 });
 
+
+
 // this code provides the server port for our application to run on
 app.listen(process.env.PORT || 4000, process.env.IP || "0.0.0.0", function() {
     console.log("Yippee its running");
       
-    });
+});
