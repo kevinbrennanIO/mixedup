@@ -13,7 +13,7 @@ app.use(express.static("scripts"));
 
 var mysql = require('mysql');
 const http = require('http');
-const api_helper = require('./api')
+
 
 
 
@@ -34,22 +34,6 @@ app.get("/drinks", function(req, res) {
   res.render("drinks",{ROOT: "views"}); 
   console.log("/drinks was acceesed");  
 });
-
-
-////////// API testing ///////////
-app.get('/api', (req, res) => {
-  api_helper.make_API_call('https://www.thecocktaildb.com/api/json/v2/8673533/filter.php?i=Dry_Vermouth,Gin,Anis')
-  .then(response => {
-    res.render("drinks",{ROOT: "views"}); 
-
-    var api_output = response
-    console.log(api_response);
-  })
-  .catch(error => {
-      res.send(error)
-  })
-})
-
 
 
 //MYSQL Connection
