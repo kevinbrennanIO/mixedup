@@ -3,3 +3,4 @@
 vars.env
 .vars.env.swp
 node_modules
+hidefb.js
