@@ -13,6 +13,13 @@ body {
   margin-top: 50px !important; 
 }
 
+
+.bannerDrinks { 
+  height: 300px;
+  background-image: linear-gradient(to bottom, #ed9db5, #edb0cc, #edc4df, #eed7ed, #f2e9f7, #f5f1fa, #faf8fd, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
+}
+
+
 .footer-widget ul li a{
   color: black !important;
   

@@ -1,8 +1,5 @@
 function apiCall(){
 
-  //alert("Hey Bitches")
-
-  //this.callToApi = callToApi
 var request = new XMLHttpRequest();
 request.open('GET', callToApi , true);
 request.onload = function () {
@@ -10,12 +7,15 @@ request.onload = function () {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response);
     console.log(this.response);
-    console.log(data.drinks[0]["strDrink"]);
+    console.log(data);
    // window.alert(data["strDrink"])
   if (request.status >= 200 && request.status < 400) {
 for (var i = 0; i < data.drinks.length; i++) {
     // key here is the index of line array
-       apple.innerHTML += "Drink Name: " + data.drinks[i]["strDrink"];
+       apple.innerHTML += "<br/>Drink Name: " + data.drinks[i]["strDrink"] + 
+                          "<br/>Drink_ID: " + data.drinks[i]["idDrink"] +
+                          "<br/>Drink_ID: " + data.drinks[i]["strDrinkThumb"] +
+                          "<br/>";
     // each element of line array is an object
     // so we can iterate over its properties
 }
@@ -23,7 +23,6 @@ for (var i = 0; i < data.drinks.length; i++) {
     alert('error');
   }
 }
-
 request.send();
 
 }
@@ -62,7 +61,6 @@ function callIng(){
     //remove the extra comma at the end, using a regex
     resultString = resultString.replace(/,(?=[^,]*$)/, '')
 
-    alert(namesArray);
 
     //var callToApi = address+resultString;
     callToApi = address+resultString;
