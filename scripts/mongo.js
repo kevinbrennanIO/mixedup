@@ -37,5 +37,7 @@ Quote.find({},function(err, returnQuote){
     } else {
         console.log("Display Quotes");
         console.log(returnQuote);
+        mongoose.connection.close()
     }
 });
+

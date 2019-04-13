@@ -8,6 +8,11 @@ body {
     background-image: url("bg-main.png") !important;
   }
 
+.cocktail-banner {
+  width: 100% !important;
+  margin-top: 50px !important; 
+}
+
 .footer-widget ul li a{
   color: black !important;
   
@@ -106,6 +111,19 @@ a.nav-link {
     line-height: 1;
     letter-spacing: -.05rem;
   }
+
+
+    /* MULTI COLUMN MENU
+  -------------------------------------------------- */
+
+
+
+/* .list-unstyled {
+  color: white;
+  background-color: #011c28;
+  border-radius: 3em;
+  padding:10px;
+} */
 
   /* FOOTER SECTION
   ------------------------- */
@@ -242,7 +260,14 @@ hr {
       font-size: 1.25rem;
       line-height: 1.4;
     }
-  
+    .containermarketing p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+    .containermarketing {
+      font-size: 50px;
+    }  
     .featurette-heading {
       font-size: 50px;
     }
@@ -250,6 +275,9 @@ hr {
   
   @media (min-width: 62em) {
     .featurette-heading {
+      margin-top: 7rem;
+    }
+    .containermarketing {
       margin-top: 7rem;
     }
   }
