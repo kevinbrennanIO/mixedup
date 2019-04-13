@@ -8,6 +8,7 @@ const path  = require('path');
 const VIEWS = path.join(__dirname, "views");
 app.use(express.static("css"));
 app.use(express.static("images"));
+app.use(express.static("scripts"));
 app.set("view engine", "ejs");
 app.use(express.static("scripts"));
 
@@ -23,10 +24,23 @@ app.get('/', function(req, res) {
 console.log("Site was acceesed");            
 });
 
+// direct application to the signup page (signupForm)
+app.get("/signupForm", function(req, res) {
+    res.render("signupForm",{ROOT: "views"}); 
+    console.log("/signup form was acceesed");  
+});
+
 // direct application to the home page (home)
 app.get("/home", function(req, res) {
     res.render("home",{ROOT: "views"}); 
-    console.log("/home was acceesed");  
+    console.log("/home was accessed");  
+});
+
+  
+// direct application to the signup page (signupForm)
+app.get("/signupForm", function(req, res) {
+    res.render("signupForm",{ROOT: "views"}); 
+    console.log("/signup form was acceesed");  
 });
 
 
@@ -112,4 +126,5 @@ app.get('/games', function (req, res) {
 app.listen(process.env.PORT || 4000, process.env.IP || "0.0.0.0", function() {
     console.log("Yippee its running");
       
+
 });
