@@ -2,6 +2,8 @@
 <html>
 <head>
     <style>
+
+      
         .cards {
           box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
           transition: 0.3s;
@@ -39,11 +41,9 @@
           
           
         </style>
-        <script>
- function kingscup(){
-  alert("DB");
-}
-</script>
+
+        
+
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,8 +57,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="index.js"></script>
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+    
+    <script onload="function n()"> </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <script src="API.js"></script>
 </head>
 <body>
   <header>
@@ -111,7 +115,7 @@
                 <h1 class="quote-style">Wisdom...</h1>
                 <p class="quote-style">"This is where the body of the quote will go once linked to MongoDB"</p>
                 <p class="quote-style"><i>- Author</i></p>
-                <p><a class="btn btn-lg btn-primary" onClick="window.location.reload()" role="button">Another Quote</a></p>
+                <p><a class="btn btn-lg btn-primary" onClick="function n()" role="button">Another Quote</a></p>
               </div>
             </div>
           </div>
@@ -154,29 +158,185 @@
   
         <div  class="container marketing">
           <!-- ################ KEEP CODE INSIDE THE DIV ################ -->
-
+          
          
-          <% for(var i = 0; i < gameList.length; i++){ %>
-          <div class="cards">
-            <div = class="imageDiv">
-              
-            <img src=<%= gameList[i].image %>  type="button" style="width:70%" onClick="<%= gameList[i].funct %>" >
-          </div>
-            <div class="containdiv">
+          <div id="root"></div>
+          <form>
+            <input list="ingredients" name="ingredient1" class="btn" placeholder="[Select]">
+            <datalist id="ingredients">
+              <option value="7-Up">
+                <option value="Absinthe">
+                <option value="Absolut Citron">
+                <option value="Absolut Kurant">
+                <option value="Absolut Vodka">
+                <option value="Advocaat">
+                <option value="Ale">
+                <option value="Amaretto">
+                <option value="Añejo rum">
+                <option value="Angelica root">
+                <option value="Apple brandy">
+                <option value="Apple cider">
+                <option value="Apple juice">
+                <option value="Applejack">
+                <option value="Apricot brandy">
+                <option value="Bacardi Limon">
+                <option value="Baileys irish cream">
+                <option value="Bailey's irish cream">
+                <option value="Banana liqueur">
+                <option value="Beer">
+                <option value="Berries">
+                <option value="Bitters">
+                <option value="Black Sambuca">
+                <option value="Blackberry brandy">
+                <option value="Blended Scotch">
+                <option value="Blended whiskey">
+                <option value="Blue Curacao">
+                <option value="Bourbon">
+                <option value="Brandy">
+                <option value="Cachaca">
+                <option value="Campari">
+                <option value="Cantaloupe">
+                <option value="Carbonated water">
+                <option value="Chambord raspberry liqueur">
+                <option value="Champagne">
+                <option value="Cherry brandy">
+                <option value="Cherry Heering">
+                <option value="Chocolate">
+                <option value="Chocolate ice-cream">
+                <option value="Chocolate liqueur">
+                <option value="Chocolate syrup">
+                <option value="Cider">
+                <option value="Coca-Cola">
+                <option value="Cocoa powder">
+                <option value="Coconut rum">
+                <option value="Coffee">
+                <option value="Coffee brandy">
+                <option value="Coffee liqueur">
+                <option value="Cognac">
+                <option value="Cointreau">
+                <option value="Corona">
+                <option value="Cranberries">
+                <option value="Cranberry juice">
+                <option value="Cranberry vodka">
+                <option value="Creme de Cacao">
+                <option value="Creme de Cassis">
+                <option value="Crown Royal">
+                <option value="Dark rum">
+                <option value="demerara Sugar">
+                <option value="Dry Vermouth">
+                <option value="Dubonnet Rouge">
+                <option value="Egg">
+                <option value="Egg yolk">
+                <option value="Espresso">
+                <option value="Everclear">
+                <option value="Firewater">
+                <option value="Frangelico">
+                <option value="Fruit punch">
+                <option value="Galliano">
+                <option value="Gin">
+                <option value="Ginger">
+                <option value="Godiva liqueur">
+                <option value="Goldschlager">
+                <option value="Grand Marnier">
+                <option value="Grape juice">
+                <option value="Grape Soda">
+                <option value="Grapefruit juice">
+                <option value="Grapes">
+                <option value="Green Chartreuse">
+                <option value="Green Creme de Menthe">
+                <option value="Grenadine">
+                <option value="Guinness stout">
+                <option value="Heavy cream">
+                <option value="Hot Chocolate">
+                <option value="Hot Damn">
+                <option value="Ice">
+                <option value="Irish cream">
+                <option value="Irish whiskey">
+                <option value="Jack Daniels">
+                <option value="Jägermeister">
+                <option value="Jim Beam">
+                <option value="Johnnie Walker">
+                <option value="Kahlua">
+                <option value="Kiwi">
+                <option value="Kiwi liqueur">
+                <option value="Kool-Aid">
+                <option value="Lager">
+                <option value="Lemon">
+                <option value="Lemon juice">
+                <option value="Lemon peel">
+                <option value="Lemon vodka">
+                <option value="Lemonade">
+                <option value="Light rum">
+                <option value="Lime">
+                <option value="Lime juice">
+                <option value="Malibu rum">
+                <option value="Mango">
+                <option value="Maui">
+                <option value="Mezcal">
+                <option value="Midori melon liqueur">
+                <option value="Milk">
+                <option value="Mint">
+                <option value="Orange">
+                <option value="Orange bitters">
+                <option value="Orange juice">
+                <option value="Ouzo">
+                <option value="Peach nectar">
+                <option value="Peach Vodka">
+                <option value="Peachtree schnapps">
+                <option value="Peppermint schnapps">
+                <option value="Pineapple juice">
+                <option value="Pisco">
+                <option value="Port">
+                <option value="Prosecco">
+                <option value="Raspberry vodka">
+                <option value="Red wine">
+                <option value="Ricard">
+                <option value="Rum">
+                <option value="Rye whiskey">
+                <option value="Sambuca">
+                <option value="Scotch">
+                <option value="Sherry">
+                <option value="Sloe gin">
+                <option value="Sour mix">
+                <option value="Southern Comfort">
+                <option value="Spiced rum">
+                <option value="Sprite">
+                <option value="Strawberries">
+                <option value="Strawberry schnapps">
+                <option value="Sugar">
+                <option value="Sugar syrup">
+                <option value="Sweet Vermouth">
+                <option value="Tea">
+                <option value="Tequila">
+                <option value="Tomato juice">
+                <option value="Triple sec">
+                <option value="Vanilla ice-cream">
+                <option value="Vanilla vodka">
+                <option value="Vermouth">
+                <option value="Vodka">
+                <option value="Water">
+                <option value="Whiskey">
+                <option value="Whisky">
+                <option value="White Creme de Menthe">
+                <option value="White Rum">
+                <option value="Wild Turkey">
+                <option value="Yoghurt">
+                <option value="Yukon Jack">
+                <option value="Zima">
                 
-              <h5><b>Required: <strong></b></h5> 
-              <p><%= gameList[i].Required %> </p> 
-              <h5><b>Steps: <strong></b></h5> 
-                <p><%= gameList[i].Step1 %> </p> 
-                <p><%= gameList[i].Step2 %> </p> 
-                <p><%= gameList[i].Step3 %> </p> 
-              
-              
-            </div>
+            </datalist>
             
-          </div>
-          <% } %>
-
+          </form>
+          <br>
+          <form >
+            <input list="ingredients" name="ingredient2" class="btn" placeholder="[Select]" >
+          
+          
+            </datalist>
+           
+          </form>
+          
+          
   
           <!-- ################ END THE EDITABLE AREA - DO NOT EDIT OUTSIDE OF THIS AREA ################ -->
   
@@ -223,9 +383,11 @@
                         <div class="footer-widget ">
                             <div class="footer-title">Social</div>
                             <ul class="list-unstyled">
-                                <li><a href="https://www.twitter.com">Twitter</a></li>
-                                <li><a href="https://www.facebook.com">Facebook</a></li>
+                                <li><a href="https://twitter.com/intent/tweet?button_hashtag=mixedup&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #mixedup</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></a></li>
+                                
+                                <div class="fb-like" data-href="https://www.facebook.com/NCIRL" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                                 <li><a href="https://www.instagram.com">Instagram</a></li>
+                                 </div>
                             </ul>
                         </div>
                     </div>
