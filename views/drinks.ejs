@@ -37,6 +37,19 @@
             margin-top: 1%;
             
           }
+
+          .picker-outer {
+            display: inline-block;
+          }
+
+          .picker-left {
+            float: left;
+          }
+
+          .picker-right {
+            float: right;
+          }
+            
           
           
           
@@ -169,12 +182,9 @@
         <div  class="container marketing">
 
           <!-- ################ KEEP CODE INSIDE THE DIV ################ -->
-          
-         
-          <div id="root"></div>
-          <form>
-            <input list="ingredients" name="ingredient1" class="btn" placeholder="[Select]">
-            <datalist id="ingredients">
+
+
+          <datalist id="ingredients">
               <option value="7-Up">
                 <option value="Absinthe">
                 <option value="Absolut Citron">
@@ -336,16 +346,80 @@
                 <option value="Zima">
                 
             </datalist>
-            
-          </form>
-          <br>
-          <form >
-            <input list="ingredients" name="ingredient2" class="btn" placeholder="[Select]" >
-          
-          
-            </datalist>
-           
-          </form>
+
+
+            <h1>Heading</h1>
+            <p>sdfghjhgfdsfghjk,mhngfdsdfgh fggh gf ertrhtjy g f</p>
+              <br><br>
+
+                    <div class="container">
+                        <div class="row">
+                          <div class="col-sm">
+                              <form>
+                                  <input list="ingredients" id="ingredient1" name="ingredient1" class="btn" placeholder="select" >
+                                </form>
+                          </div>
+                          <div class="col-sm">
+                              <h1>First Ingredient</h1>
+                              <p>choose first ingredient</p>
+                          </div>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="container">
+                          <div class="row">
+                            <div class="col-sm">
+                                <form>
+                                    <input list="ingredients" id="ingredient2" name="ingredient2" class="btn" placeholder="select" >
+                                  </form>
+                            </div>
+                            <div class="col-sm">
+                                <h1>Second Ingredient</h1>
+                                <p>choose second ingredient</p>
+                            </div>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-sm">
+                                  <form>
+                                      <input list="ingredients" id="ingredient3" name="ingredient3" class="btn" placeholder="select" >
+                                    </form>
+                              </div>
+                              <div class="col-sm">
+                                  <h1>Third Ingredient</h1>
+                                  <p>choose third ingredient</p>
+                              </div>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="container">
+                              <div class="row">
+                                <div class="col-sm">
+                                    <form>
+                                        <input list="ingredients" id="ingredient4" name="ingredient4" class="btn" placeholder="select" >
+                                      </form>
+                                </div>
+                                <div class="col-sm">
+                                    <h1>Fourth Ingredient</h1>
+                                    <p>choose fourth ingredient</p>
+                                </div>
+                              </div>
+                            </div>
+                            <hr>
+                            
+
+
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="callIng()">Find Cocktails</button>
+                                
+
+                            <div id="root"></div>
+
+
+
+
+
           
           
 
