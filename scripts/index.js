@@ -29,10 +29,19 @@ app.get("/home", function(req, res) {
     console.log("/home was acceesed");  
 });
 
-// direct application to the home page (home)
+
+// direct application to the top picks page 
+app.get("/picks", function(req, res) {
+    res.render("picks",{ROOT: "views"}); 
+    console.log("/picks was acceesed");  
+});
+
+
+// direct application to the top picks page 
 app.get("/drinks", function(req, res) {
-  res.render("drinks",{ROOT: "views"}); 
-  console.log("/drinks was acceesed");  
+    res.render("drinks",{ROOT: "views"}); 
+    console.log("/drinks was acceesed");  
+
 });
 
 
@@ -83,7 +92,7 @@ app.get('/games', function (req, res) {
             
             // Add object into array
             gameList.push(game);
-            console.log(game.funct);
+            
         }
     
 
@@ -95,7 +104,11 @@ app.get('/games', function (req, res) {
 
 
 
-// this code provides the server port for our application to run on
+
+ 
+
+    // this code provides the server port for our application to run on
+
 app.listen(process.env.PORT || 4000, process.env.IP || "0.0.0.0", function() {
     console.log("Yippee its running");
       

@@ -29,7 +29,9 @@
     "mongoose": "^5.4.20",
     "mysql": "^2.16.0",
     "nodemon": "^1.18.10",
+
     "request": "^2.88.0"
+
   },
   "devDependencies": {}
 }
