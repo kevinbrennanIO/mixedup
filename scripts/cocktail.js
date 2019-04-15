@@ -14,8 +14,8 @@ for (var i = 0; i < data.drinks.length; i++) {
     // key here is the index of line array
        apple.innerHTML += "<br/>Drink Name: " + data.drinks[i]["strDrink"] + 
                           "<br/>Drink_ID: " + data.drinks[i]["idDrink"] +
-                          "<br/>Drink_ID: " + <img src= {data.drinks[i]["strDrinkThumb"]}/> +
-                          "<br/>Link"
+                          "<br/>Drink_ID: " + data.drinks[i]["strDrinkThumb"] +
+
                           "<br/>";
     // each element of line array is an object
     // so we can iterate over its properties

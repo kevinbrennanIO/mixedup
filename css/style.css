@@ -8,6 +8,18 @@ body {
     background-image: url("bg-main.png") !important;
   }
 
+.cocktail-banner {
+  width: 100% !important;
+  margin-top: 50px !important; 
+}
+
+
+.bannerDrinks { 
+  height: 300px;
+  background-image: linear-gradient(to bottom, #ed9db5, #edb0cc, #edc4df, #eed7ed, #f2e9f7, #f5f1fa, #faf8fd, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
+}
+
+
 .footer-widget ul li a{
   color: black !important;
   
@@ -106,6 +118,19 @@ a.nav-link {
     line-height: 1;
     letter-spacing: -.05rem;
   }
+
+
+    /* MULTI COLUMN MENU
+  -------------------------------------------------- */
+
+
+
+/* .list-unstyled {
+  color: white;
+  background-color: #011c28;
+  border-radius: 3em;
+  padding:10px;
+} */
 
   /* FOOTER SECTION
   ------------------------- */
