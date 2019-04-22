@@ -2,59 +2,6 @@
 <html>
 <head>
 
-    <style>
-
-      
-        .cards {
-          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-          transition: 0.3s;
-          width: 90%;
-          margin: auto;
-          display: inline-block;
-          
-          
-          
-          }
-          .cards:hover {
-          box-shadow: 0 18px 46px 0 rgba(0,0,0,0.2);
-          }
-          h5{
-            font-size: 25px;
-          }
-          .containdiv {
-          padding: 2px 4px;
-          
-          margin-left: 2%;
-          
-          
-        } 
-
-
-          .imageDiv{
-            width: 40%;
-            float: left;
-            margin-left: 10%;
-            margin-top: 1%;
-            
-          }
-
-          .picker-outer {
-            display: inline-block;
-          }
-
-          .picker-left {
-            float: left;
-          }
-
-          .picker-right {
-            float: right;
-          }
-            
-          
-          
-          
-          
-        </style>
 
         
 
@@ -86,6 +33,19 @@
           $(".hide").hide();
         });
         });
+        $(document).ready(function(){
+          $("#hide").click(function(){
+          $("#show").show();
+        });
+        });
+
+        /** 
+ * Open all external links in a new window
+ */
+//open all hyperlinks in a new window using jQuery
+$(document).ready(function(){
+ $("a[@href^='https']").attr('target','_blank');
+}); 
     </script>
 
 </head>
@@ -374,7 +334,7 @@
                           <br>
                           <br>
 
-                          <button class="btn btn-outline-success my-2 my-sm-0" id="hide" type="button" onClick="window.location.reload()">Pick again</button>
+                          <button class="btn btn-outline-success my-2 my-sm-0" id="show" type="button" onClick="window.location.reload()">Pick again</button>
 
                           
 
@@ -473,7 +433,11 @@
 
 <script src="cocktail.js"></script>
 <script src="dropdown.js"></script>
-
+<script>
+$(document).ready(function(){
+ $("a[@href^='https']").attr('target','_blank');
+}); 
+</script>
 
 
 </body>
