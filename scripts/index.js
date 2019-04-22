@@ -65,6 +65,12 @@ app.get("/drinks2", function(req, res) {
 
 });
 
+// direct application to the top picks page 
+app.get("/privacy", function(req, res) {
+    res.render("privacy",{ROOT: "views"}); 
+    console.log("/privacy was acceesed");  
+
+});
 
 //MYSQL Connection
 var db = mysql.createConnection({
