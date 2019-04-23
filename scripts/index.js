@@ -18,6 +18,12 @@ const http = require('http');
 
 
 
+    app.get('views/randomgen', function (req, res,ejs) {
+        res.sendFile(path.join(__dirname+'views/randomgen.ejs'));
+       });
+
+
+
 // direct application to the root page (index)
 app.get('/', function(req, res) {
     res.render("index",{ROOT: "views"}); 
@@ -59,9 +65,10 @@ app.get("/drinks", function(req, res) {
 });
 
 // direct application to the top picks page 
-app.get("/drinks2", function(req, res) {
-    res.render("drinks2",{ROOT: "views"}); 
-    console.log("/drinks2 was acceesed");  
+
+app.get("/randomgen", function(req, res) {
+    res.render("randomgen",{ROOT: "views"}); 
+    console.log("/randomgen was acceesed");  
 
 });
 
@@ -123,6 +130,7 @@ app.get('/games', function (req, res) {
     
 
         // Render to games.ejs page using array 
+
         res.render('games.ejs', { gameList: gameList });
         
     });

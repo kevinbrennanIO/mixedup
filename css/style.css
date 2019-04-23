@@ -463,6 +463,16 @@ figure img {
 
 ======================================*/
 
+.layout {
+  margin: auto;
+  width: 60%;
+  font-style: oblique;
+  font-size: 30px;
+  color: #ff4da6;
+  box-shadow: 0 4px 8px 0 rgb(172, 221, 107)
+  
+}
+
 
 /*============= Kevin CSS =============
 
