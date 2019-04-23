@@ -2,82 +2,6 @@
 <html>
 
 <head>
-  <style>
-    .pickcards {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      transition: 0.3s;
-      width: 80%;
-      margin: auto; 
-      /* display: inline-block; */
-      position: relative;
-     
-  text-align: center;
-  color: white;
-
-
-
-    }
-
-    .cards:hover {
-      box-shadow: 0 18px 46px 0 rgba(0, 0, 0, 0.2);
-    }
-    .pickcards:hover {
-      box-shadow: 0 18px 25px 0 rgba(250, 246, 9, 0.952);
-    }
-
-    h5 {
-      font-size: 25px;
-      text-align: center;
-  color: greenyellow;
-    }
-    #top{
-      font-size: 59px;
-    }
-    .containdiv {
-      padding: 2px 4px;
-      display: none;
-      margin-left: 2%;
-
-
-    }
-    ul{      
-      font-size: 15px;
-      text-align: left;
-  color: rgb(194, 55, 182);
-  margin-top:5%; 
-  margin-left:10%; 
-  margin-right:10%; 
-  margin-bottom:5%; 
-
-
-    }
-
-    .picksdiv {
-      text-align: left;
-  color: rgb(194, 55, 182);
-  margin-top:5%; 
-  margin-left:10%; 
-  margin-right:10%; 
-  margin-bottom:5%; 
-      
-      /* position: absolute;
-  bottom: 10%;
-  left: 50%;
-   transform: translate(-50%, -10%);  */
-
-
-    }
-
-    .imageDiv {
-      width: 40%;
-      float: left;
-      margin-left: 10%;
-      margin-top: 1%;
-
-    }
-  </style>
-
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>PAGE_TITLE</title>
@@ -93,6 +17,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="index.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+<script src="https://apis.google.com/js/platform.js"></script>
+  <script>
+        
+    $(document).ready(function(){
+      $("#title1").click(function(){
+      $("#pick1").toggle();
+    });
+    });
+    $(document).ready(function(){
+      $("#title2").click(function(){
+      $("#pick2").toggle();
+    });
+    });
+    $(document).ready(function(){
+      $("#title3").click(function(){
+      $("#pick3").toggle();
+    });
+    });
+    $(document).ready(function(){
+      $("#title4").click(function(){
+      $("#pick4").toggle();
+    });
+    });
+    $(document).ready(function(){
+      $("#title5").click(function(){
+      $("#pick5").toggle();
+    });
+    });
+    $(document).ready(function(){
+      $("#title6").click(function(){
+      $("#pick6").toggle();
+    });
+    });
+</script>
 
 </head>
 
@@ -113,7 +73,7 @@
             <a class="nav-link" href="/picks">Top Picks</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Cocktail Finder</a>
+            <a class="nav-link" href="/drinks">Cocktail Finder</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Random Cocktail</a>
@@ -205,9 +165,10 @@
 
 
 
-      <div class="pickcards">
+      <div class="pickcards" id = "title1">
         
-          <h5 id="top"><b>Market Street Julep <strong></b></h5>
+          <h5 id="top" ><b>Market Street Julep <strong></b></h5>
+            <div id = "pick1">
           <img src="MarketStreetJulep.JPG" height="400" width= "400">
         
         <div class="picksdiv">
@@ -230,12 +191,15 @@
         </div>
 
         
+      </div>
+        
 
       </div>
 
-      <div class="pickcards">
+      <div class="pickcards" id = "title2">
         
           <h5 id="top"><b>Pina Margarita <strong></b></h5>
+            <div id = "pick2">
           <img src="pinamargarita.jpg" height="400" width= "400">
           
         <div class="picksdiv">
@@ -259,13 +223,14 @@
 
         </div>
 
-        
+        </div>
 
       </div>
 
-      <div class="pickcards">
+      <div class="pickcards" id = "title3">
         
           <h5 id="top"><b>Tequila Smash <strong></b></h5>
+            <div id = "pick3">
           <img src="tequilasmash.jpg" height="400" width= "400">
         
         <div class="picksdiv">
@@ -290,13 +255,14 @@
 
         </div>
 
-        
+        </div>
 
       </div>
 
-      <div class="pickcards">
+      <div class="pickcards" id = "title4">
         
           <h5 id="top"><b>Melon Stand<strong></b></h5>
+            <div id = "pick4">
           <img src="melonstand.jpg" height="400" width= "400">
         
         <div class="picksdiv">
@@ -320,13 +286,14 @@
 
         </div>
 
-        
+        </div>
 
       </div>
 
-      <div class="pickcards">
+      <div class="pickcards" id = "title5">
         
           <h5 id="top"><b>Casino Royal<strong></b></h5>
+            <div id = "pick5">
           <img src="casinoroyal.jpg" height="400" width= "400">
         
         <div class="picksdiv">
@@ -350,13 +317,14 @@
 
         </div>
 
-        
+        </div>
 
       </div>
 
-      <div class="pickcards">
+      <div class="pickcards" id = "title6">
         
           <h5 id="top"><b>Bloody Mary - Punch<strong></b></h5>
+            <div id = "pick6">
           <img src="bloodymary.jpg" height="400" width= "400">
         
         <div class="picksdiv">
@@ -384,7 +352,7 @@
 
         </div>
 
-        
+      </div>
 
       </div>
 
@@ -415,8 +383,7 @@
               <ul class="list-unstyled">
                 <li><a href="#">About</a></li>
                 <li><a href="#">Support</a></li>
-                <li><a href="#">Press</a></li>
-                <li><a href="#">Legal & Privacy</a></li>
+                <li><a href="/privacy">Legal & Privacy</a></li>
               </ul>
             </div>
           </div>
@@ -426,8 +393,8 @@
             <div class="footer-widget ">
               <div class="footer-title">Quick Links</div>
               <ul class="list-unstyled">
-                <li><a href="#">News</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="https://thetakeout.com/tag/cocktails" target='_blank'>News</a></li>
+                <li><a href="http://bfy.tw/NLjI" target='_blank'>Contact us</a></li>
                 <li><a href="#">FAQ</a></li>
               </ul>
             </div>
@@ -438,10 +405,16 @@
             <div class="footer-widget ">
               <div class="footer-title">Social</div>
               <ul class="list-unstyled">
-                <li><a href="https://www.twitter.com">Twitter</a></li>
-                <li><a href="https://www.facebook.com">Facebook</a></li>
-                <li><a href="https://www.instagram.com">Instagram</a></li>
-              </ul>
+
+                <li><a href="https://twitter.com/intent/tweet?button_hashtag=mixedup&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #mixedup</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></a></li>
+                <!--Twitter code from https://publish.twitter.com/#-->
+                <div class="fb-like" data-href="https://www.facebook.com/NCIRL" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                <!--Facebook code from https://developers.facebook.com/docs/plugins/like-button-->
+                <li><a href="https://www.instagram.com/ncirl"><img border="0" src="instagram.jpg" width="50" height="50"></li>
+                <li><div class="g-ytsubscribe" data-channel="NCIRl" data-layout="default" data-count="default"></div></li></div>
+                 <!--youtube code from https://developers.google.com/youtube/youtube_subscribe_button-->
+
+            </ul>
             </div>
           </div>
           <!-- /.footer-links -->

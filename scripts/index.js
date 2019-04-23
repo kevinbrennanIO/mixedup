@@ -65,12 +65,19 @@ app.get("/drinks", function(req, res) {
 });
 
 // direct application to the top picks page 
+
 app.get("/randomgen", function(req, res) {
     res.render("randomgen",{ROOT: "views"}); 
     console.log("/randomgen was acceesed");  
 
 });
 
+// direct application to the top picks page 
+app.get("/privacy", function(req, res) {
+    res.render("privacy",{ROOT: "views"}); 
+    console.log("/privacy was acceesed");  
+
+});
 
 //MYSQL Connection
 var db = mysql.createConnection({
@@ -112,7 +119,6 @@ app.get('/games', function (req, res) {
                 'Step2': rows[i].Step2,
                 'Step3': rows[i].Step3,
                 'image': rows[i].image,
-                'funct': rows[i].funct,
                 'game_id': rows[i].game_id,
 
             }
