@@ -439,6 +439,7 @@ list-style: none;
   figure {
     display: inline-block;
     text-align: center;
+    margin:auto;
     color: darkblue;
 }
 figcaption {
