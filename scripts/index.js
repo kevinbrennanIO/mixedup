@@ -17,6 +17,12 @@ const http = require('http');
 
 
 
+    app.get('views/randomgen', function (req, res,ejs) {
+        res.sendFile(path.join(__dirname+'views/randomgen.ejs'));
+       });
+
+
+
 // direct application to the root page (index)
 app.get('/', function(req, res) {
     res.render("index",{ROOT: "views"}); 
