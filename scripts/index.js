@@ -50,6 +50,13 @@ app.get("/drinks", function(req, res) {
 
 });
 
+// direct application to the top picks page 
+app.get("/randomgen", function(req, res) {
+    res.render("randomgen",{ROOT: "views"}); 
+    console.log("/randomgen was acceesed");  
+
+});
+
 
 //MYSQL Connection
 var db = mysql.createConnection({

@@ -1,4 +1,4 @@
-var app2 = document.getElementById('root');
+var app2 = document.getElementById('rdmDrink');
 
 var address = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
  
