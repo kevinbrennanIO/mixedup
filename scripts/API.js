@@ -47,9 +47,13 @@ request.onload = function () {
   if (request.status >= 200 && request.status < 400) {
 for (var i = 0; i < data.drinks.length; i++) {
     // key here is the index of line array
+
        
 
-      app2.innerHTML += "Drink Name: "+ data.drinks[i]["strDrink"]+ "Drink Type : " + data.drinks[i]["strAlcoholic"]+ "Glass Type: " +data.drinks[i]["strGlass"]+ "Instructions: " +data.drinks[i]["strInstructions"]+ "Ingredients: " +data.drinks[i]["strIngredient1"]+ data.drinks[i]["strIngredient2"]+ data.drinks[i]["strIngredient3"]+ data.drinks[i]["strIngredient4"]+ data.drinks[i]["strIngredient5"]+ data.drinks[i]["strIngredient6"]+ "Measures: " +data.drinks[i]["strMeasure1"]+ data.drinks[i]["strMeasure2"]+ data.drinks[i]["strMeasure3"]+ data.drinks[i]["strMeasure4"]+ data.drinks[i]["strMeasure5"];
+      app2.innerHTML += "Drink Name: "+ data.drinks[i]["strDrink"]+ "<br>Drink Type : " + data.drinks[i]["strAlcoholic"]+ "<br>Glass Type: " +data.drinks[i]["strGlass"]+ "<br>Instructions: " +data.drinks[i]["strInstructions"]+ "<br>Ingredients: " +data.drinks[i]["strIngredient1"]+ data.drinks[i]["strIngredient2"]+ data.drinks[i]["strIngredient3"]+ data.drinks[i]["strIngredient4"]+ data.drinks[i]["strIngredient5"]+ data.drinks[i]["strIngredient6"]+ "<br>Measures: " +data.drinks[i]["strMeasure1"]+ data.drinks[i]["strMeasure2"]+ data.drinks[i]["strMeasure3"]+ data.drinks[i]["strMeasure4"]+ data.drinks[i]["strMeasure5"];
+
+     
+
     
     // each element of line array is an object
     // so we can iterate over its properties

@@ -110,6 +110,7 @@ app.get('/games', function (req, res) {
     
 
         // Render to games.ejs page using array 
+
         res.render('games.ejs', { gameList: gameList });
         
     });
