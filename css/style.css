@@ -290,6 +290,11 @@ color: white;
   margin-top: 10%;
 }
 
+#btn-fxr {
+  color: white !important;
+  background-color: #c9cdd0;
+}
+
 
 #top{
   font-size: 3em;
