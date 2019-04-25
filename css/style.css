@@ -161,19 +161,25 @@ hr {
   transition: all 0.5s; 
   word-wrap: break-word; 
   white-space: normal !important; 
-  background-color: rgb(172, 221, 107);
   border: none;
-  background-color: #011c28;
+  background-color: #4d85c1;
+}
+
+.link {
+  color: black;
+}
+.link:hover {
+  color:rgb(2, 41, 18);
 }
 
 .btn-default:hover { 
-  background-color: rgb(172, 221, 107); 
+  background-color: #235f83;
   color: #fff; 
   border: 1px solid rgb(172, 221, 107); 
 }
 
 .btn-default.focus, .btn-default:focus { 
-  background-color: #ec8a13; 
+  color: #235f83;; 
   color: #fff; 
   border: 1px solid #ec8a13; 
   box-shadow: 0 0 0 0.1rem rgb(236, 138, 19); }
@@ -239,8 +245,6 @@ hr {
 #show{
   display:none;
 }
-
-
 #pick6{
   display:none;
 }
@@ -264,13 +268,11 @@ hr {
   transition: 0.3s;
   width: 80%;
   margin: auto; 
-  /* display: inline-block; */
+
   position: relative;
  
 text-align: center;
 color: white;
-
-
 
 }
 
@@ -281,21 +283,25 @@ color: white;
   box-shadow: 0 18px 25px 0 rgba(250, 246, 9, 0.952);
 }
 
+.container404 {
+  margin-left: 30%;
+  margin-right: 30%;
+  text-align: center;
+  margin-top: 10%;
+}
+
 
 #top{
-  
   font-size: 3em;
   text-align: center;
-color: greenyellow;
+  color: greenyellow;
 }
 .containdiv {
   padding: 2px 4px;
-  display: ;
   text-align: left;
   margin-left: 2%;
-
-
 }
+
 ul{      
   font-size: 15px;
   text-align: left;
@@ -304,8 +310,6 @@ margin-top:5%;
 margin-left:10%; 
 margin-right:10%; 
 margin-bottom:5%; 
-
-
 }
 
 .picksdiv {
@@ -377,7 +381,7 @@ margin-left:45%;
 margin-right:10%; 
 margin-bottom:5%; 
 list-style: none;
-
+}
 
   .imageDiv{
     width: 40%;
