@@ -162,14 +162,14 @@ hr {
   word-wrap: break-word; 
   white-space: normal !important; 
   border: none;
-  background-color: #4d85c1;
+  background-color: #a6d7a2;
 }
 
 .link {
   color: black;
 }
 .link:hover {
-  color:rgb(2, 41, 18);
+  color:rgb(45, 45, 45);
 }
 
 .btn-default:hover { 
@@ -179,7 +179,7 @@ hr {
 }
 
 .btn-default.focus, .btn-default:focus { 
-  color: #235f83;; 
+  color: #454545; 
   color: #fff; 
   border: 1px solid #ec8a13; 
   box-shadow: 0 0 0 0.1rem rgb(236, 138, 19); }
