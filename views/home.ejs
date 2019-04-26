@@ -19,6 +19,7 @@
     <script src="firebase.js"></script>
     <script src="hidefb.js"></script>
     <script src="mongo.js"></script>
+    <script src="random.js"></script>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
     <script src="https://apis.google.com/js/platform.js"></script>
@@ -99,12 +100,17 @@
               <img class="first-slide" style="background-color: #FBDA61; background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);" alt="First slide">
               <div class="container">
                 <div class="carousel-caption">
-                  
+
+
+
+                  <% var myArray = [0,1,2,3,4,5,6,7,8,9]; %>  
+                  <% var rand = myArray[Math.floor(Math.random() * myArray.length)]; %>
+                
                   <% for(var i=0; i<quotes.length; i++) {%>
-                  <h3 class="quote-style"><%= quotes[2].quote %></h3>
+                  <h3 class="quote-style"><%= quotes[rand].quote %></h3>
                   <br>
                   
-                  <h6 class="quote-style"><i>- <%= quotes[3].author %></i></h6>
+                  <h6 class="quote-style"><i>- <%= quotes[rand].author %></i></h6>
                   <% break %>
                   <% } %>
                   <br>
@@ -114,7 +120,6 @@
             </div>
           </div>
         </div>
-  
   
         <!-- Marketing messaging and featurettes
         ================================================== -->

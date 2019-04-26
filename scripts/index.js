@@ -182,8 +182,7 @@ app.get('/games', function (req, res) {
 
 // direct application to the top picks page 
 app.get("/*", function(req, res) {
-    res.render("404",{ROOT: "views"}); 
-    console.log("/404");  
+    res.render("404",{ROOT: "views"});   
 
 });
 
