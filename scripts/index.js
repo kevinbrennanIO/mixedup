@@ -6,23 +6,76 @@ var app = express();                           // now we need to declare our app
 require('dotenv').config(); 
 const path  = require('path');
 const VIEWS = path.join(__dirname, "views");
+
 app.use(express.static("css"));
 app.use(express.static("images"));
 app.use(express.static("scripts"));
+
 app.set("view engine", "ejs");
-app.use(express.static("scripts"));
+
 
 var mysql = require('mysql');
 const http = require('http');
 
+const MongoClient = require('mongodb').MongoClient
+var db
+
+MongoClient.connect('mongodb://localhost:27000/quotes', (err, client) => {
+  if (err) return console.log(err)
+  db = client.db('quotes') // whatever your database name is
+})
+
+app.get('/home', (req, res) => {
+    db.collection('quotes').find().toArray((err, result) => {
+      if (err) return console.log(err)
+      // renders index.ejs
+      res.render('home.ejs', {quotes: result})
+    })
+  })
+
+// var mongoose = require('mongoose');
+// mongoose.connect('mongodb://localhost:27000/quotes', {useNewUrlParser: true});
 
 
+// // MONGO SCHEMA 
+// var quoteSchema = new mongoose.Schema({
+//     quote: String,
+//     number: String,
+//     author: String
+// });
 
-    app.get('views/randomgen', function (req, res,ejs) {
-        res.sendFile(path.join(__dirname+'views/randomgen.ejs'));
-       });
+// const Quote = mongoose.model('Quote', quoteSchema);
+
+// var result;
+
+// app.get("/home", function(req, res){
+//     var data = [];
+//     //Get one quote from DB
+//     Quote.count().exec(function (err, count) {
+
+//         // Get a random entry
+//         var random = Math.floor(Math.random() * count)
+      
+//         // Again query all users but only fetch one offset by our random #
+//         Quote.findOne().skip(random).exec(
+//           function (err, result) {
+//             console.log(result) 
+//             data.push(result)
+//             console.log("SPACE")
+//             console.log(data)
+//             // mongoose.connection.close()
+//           })
+
+//       })
+//       var jpost = JSON.stringify(Quote);
+//       res.render("home",{ Quote: jpost }); 
+      
+// });
 
 
+app.get('views/randomgen', function (req, res,ejs) {
+    res.sendFile(path.join(__dirname+'views/randomgen.ejs'));
+});
 
 // direct application to the root page (index)
 app.get('/', function(req, res) {
@@ -37,10 +90,10 @@ app.get("/signupForm", function(req, res) {
 });
 
 // direct application to the home page (home)
-app.get("/home", function(req, res) {
-    res.render("home",{ROOT: "views"}); 
-    console.log("/home was accessed");  
-});
+// app.get("/home", function(req, res) {
+//     res.render("home",{ROOT: "views"}); 
+//     console.log("/home was accessed");  
+// });
 
   
 // direct application to the signup page (signupForm)
@@ -119,32 +172,23 @@ app.get('/games', function (req, res) {
                 'Step2': rows[i].Step2,
                 'Step3': rows[i].Step3,
                 'image': rows[i].image,
-                'game_id': rows[i].game_id,
-
+                'game_id': rows[i].game_id
             }
-            
             // Add object into array
             gameList.push(game);
-            
         }
-    
-
         // Render to games.ejs page using array 
-
         res.render('games.ejs', { gameList: gameList });
-        
     });
 });
 
+// direct application to the top picks page 
+app.get("/*", function(req, res) {
+    res.render("404",{ROOT: "views"});   
 
+});
 
-
- 
-
-    // this code provides the server port for our application to run on
-
+// this code provides the server port for our application to run on
 app.listen(process.env.PORT || 4000, process.env.IP || "0.0.0.0", function() {
-    console.log("Yippee its running");
-      
-
+    console.log("MixedUp Application is Running");
 });
