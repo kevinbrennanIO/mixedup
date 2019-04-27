@@ -1,30 +1,28 @@
-      //login function
-      function login(){
-
-        // get the entered email and password
-        var user = firebase.auth().currentUser;
-        var userEmail = document.getElementById("inputEmail").value;
-        var userPass = document.getElementById("inputPassword").value; 
+//login function
+function login(){
+    
+    var user = firebase.auth().currentUser;
+    var userEmail = document.getElementById("inputEmail").value;
+    var userPass = document.getElementById("inputPassword").value;
         
         firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
         
-                // Handle Errors here.
-                var errorCode = error.code;
-                var errorMessage = error.message;
-        
-                window.alert("Woops! " + errorMessage + "\nTry again!");            
-        
-            });
+            window.alert("Woops! " + errorMessage + "\nTry again!");
 
-            if(user){
-                window.location = "home";
-            }
-            else{
-                window.alert("Woops! " + errorMessage + "\nTry again!");
-                window.location = "/";
-            }
-        
+        });
+
+
+        if(user){
+            window.location = "home";
         }
+        else{
+            window.alert("Woops! " + errorMessage + "\nTry again!");
+            window.location = "/";
+        }         
+}
 
 //redirect to signup form
 function gotoform(){
@@ -34,35 +32,41 @@ function gotoform(){
 //sign up
 function signup(){
     
+    var bdate = document.getElementById("dob").value;
+    var verAge = '2001-01-01'
     var user = firebase.auth().currentUser;
     var userEmail = document.getElementById("inputEmail").value;
     var userPass = document.getElementById("inputPassword").value;
 
-    firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function (error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-
-        window.alert("Woops! " + errorMessage + "\nTry again!");
-    });
-
-    //Redirect to homepage after successful login
-    if(user){
-        window.location = "home";
+    if(bdate > verAge){
+        window.alert("Date of birth entered is: " + bdate + ".\nYou must be 18 years of age\nor older to use this site");
     }
     else{
-        window.alert("Woops! " + errorMessage + "\nTry again!");
-        window.location = "signupForm";
-    }
+        firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function (error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            
+            window.alert("Woops! " + errorMessage + "\nTry again!");
+        });
+    
+        //Redirect to homepage after successful login
+        if(user){
+            window.location = "home";
+        }
+        else{
+            window.alert("Woops! " + errorMessage + "\nTry again!");
+            window.location = "signupForm";
+        } 
+    }       
 }
 
 //LOGOUT FUNCTION
 function logout(){
 
     firebase.auth().signOut().then(function() {
-        // Sign-out successful.
         window.location("/");
-      }).catch(function(error) {
+    }).catch(function(error) {
         // An error happened.
       });
-    }
+}

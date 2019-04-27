@@ -40,21 +40,20 @@
       firebase.initializeApp(config);
     </script>
 
-<script>
+    <script>
     //CHECK WHETHER USER IS LOGGED IN OR OUT
     firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-      //is signed in
-      console.log("You're in!!");
-      //window.location.href = "home";
-  } else {
-      //no user signed in
-      console.log("You're out!!");
-      window.location = "/";
-  }
-});
-    
-  </script>
+      if (user) {
+        //is signed in
+        console.log("You're in!!");
+        //window.location.href = "home";
+      } else {
+        //no user signed in
+        console.log("You're out!!");
+        window.location = "/";
+      }
+    });
+    </script>
 
 </head>
 <body>

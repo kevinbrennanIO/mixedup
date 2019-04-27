@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="index.js"></script>
+    <script src="firebase.js"></script>
+    <script src="hidefb.js"></script>
 
     <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
@@ -39,6 +41,37 @@
           $("#show").show();
         });
         });
+    </script>
+
+    <!--FIREBASE-->
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: fbconfig.API_KEY,
+        authDomain: fbconfig.AUTH_DOMAIN,
+        databaseURL: fbconfig.DATABASE_URL,
+        projectId: fbconfig.PROJECT_ID,
+        storageBucket: fbconfig.STORAGE_BUCKET,
+        messagingSenderId: fbconfig.MESSAGE_SENDER_ID
+      };
+
+      firebase.initializeApp(config);
+    </script>
+
+    <script>
+    //CHECK WHETHER USER IS LOGGED IN OR OUT
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        //is signed in
+        console.log("You're in!!");
+        //window.location.href = "home";
+      } else {
+        //no user signed in
+        console.log("You're out!!");
+        window.location = "/";
+      }
+    });
     </script>
 
 </head>
