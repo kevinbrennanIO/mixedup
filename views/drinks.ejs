@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>PAGE_TITLE</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>PAGE_TITLE</title>
 
-    <!-- Bootstrap Stylesheet-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Main Stylesheet-->
-    <link rel="stylesheet" href="style.css"> <!-- copy the contents and and start a page specific css stylesheet-->
-    <!-- FontAwesome Stylesheet-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="index.js"></script>
-    <script src="firebase.js"></script>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
-    <script src="https://apis.google.com/js/platform.js"></script>
+  <!-- Bootstrap Stylesheet-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Main Stylesheet-->
+  <link rel="stylesheet" href="style.css"> <!-- copy the contents and and start a page specific css stylesheet-->
+  <!-- FontAwesome Stylesheet-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="index.js"></script>
+  <script src="firebase.js"></script>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2">
+  </script>
+  <script src="https://apis.google.com/js/platform.js"></script>
 
 
   <style>
     #rumb {
       display: none;
     }
+
     #vodkab {
       display: none;
     }
+
     #whiskeyb {
       display: none;
     }
+
     #tequilab {
       display: none;
     }
+
     #ginb {
       display: none;
     }
@@ -55,37 +63,40 @@
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="index.js"></script>
+  <script src="hidefb.js"></script>
+  <script src="firebase.js"></script>
   <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous"
-    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2">
+  </script>
   <script src="https://apis.google.com/js/platform.js"></script>
 
   <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous"
-    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2">
+  </script>
 
   <script onload="function n()"> </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="API.js"></script>
 
   <script>
-    
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction()
+    };
 
-function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("myBtn").style.display = "block";
-  } else {
-    document.getElementById("myBtn").style.display = "none";
-  }
-}
+    function scrollFunction() {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  // document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      // document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
 
     $(document).ready(function () {
       $("#submit").click(function () {
@@ -157,30 +168,27 @@ function topFunction() {
         alert("Our store is coming very soon!");
       });
     });
-
-
-
   </script>
 
-    <!--FIREBASE-->
-    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: fbconfig.API_KEY,
-        authDomain: fbconfig.AUTH_DOMAIN,
-        databaseURL: fbconfig.DATABASE_URL,
-        projectId: fbconfig.PROJECT_ID,
-        storageBucket: fbconfig.STORAGE_BUCKET,
-        messagingSenderId: fbconfig.MESSAGE_SENDER_ID
-      };
+  <!--FIREBASE-->
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: fbconfig.API_KEY,
+      authDomain: fbconfig.AUTH_DOMAIN,
+      databaseURL: fbconfig.DATABASE_URL,
+      projectId: fbconfig.PROJECT_ID,
+      storageBucket: fbconfig.STORAGE_BUCKET,
+      messagingSenderId: fbconfig.MESSAGE_SENDER_ID
+    };
 
-      firebase.initializeApp(config);
-    </script>
+    firebase.initializeApp(config);
+  </script>
 
-    <script>
+  <script>
     //CHECK WHETHER USER IS LOGGED IN OR OUT
-    firebase.auth().onAuthStateChanged(function(user) {
+    firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
         //is signed in
         console.log("You're in!!");
@@ -188,10 +196,11 @@ function topFunction() {
       } else {
         //no user signed in
         console.log("You're out!!");
+        
         window.location = "/";
       }
     });
-    </script>
+  </script>
 
 </head>
 
@@ -240,433 +249,425 @@ function topFunction() {
     <!-- Marketing messaging and featurettes
         ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
-    <div class = "bannerDrinks"></div>
+    <div class="bannerDrinks"></div>
     <div class="container marketing">
-                        
-          <!-- ################ KEEP CODE INSIDE THE DIV ################ -->
 
-          <div class="hide">
-            <datalist id="ingredients">
-              <option value="7-Up">
-              <option value="Absinthe">
-              <option value="Absolut Citron">
-              <option value="Absolut Kurant">
-              <option value="Absolut Vodka">
-              <option value="Advocaat">
-              <option value="Ale">
-              <option value="Amaretto">
-              <option value="Añejo rum">
-              <option value="Angelica root">
-              <option value="Apple brandy">
-              <option value="Apple cider">
-              <option value="Apple juice">
-              <option value="Applejack">
-              <option value="Apricot brandy">
-              <option value="Bacardi Limon">
-              <option value="Baileys irish cream">
-              <option value="Bailey's irish cream">
-              <option value="Banana liqueur">
-              <option value="Beer">
-              <option value="Berries">
-              <option value="Bitters">
-              <option value="Black Sambuca">
-              <option value="Blackberry brandy">
-              <option value="Blended Scotch">
-              <option value="Blended whiskey">
-              <option value="Blue Curacao">
-              <option value="Bourbon">
-              <option value="Brandy">
-              <option value="Cachaca">
-              <option value="Campari">
-              <option value="Cantaloupe">
-              <option value="Carbonated water">
-              <option value="Chambord raspberry liqueur">
-              <option value="Champagne">
-              <option value="Cherry brandy">
-              <option value="Cherry Heering">
-              <option value="Chocolate">
-              <option value="Chocolate ice-cream">
-              <option value="Chocolate liqueur">
-              <option value="Chocolate syrup">
-              <option value="Cider">
-              <option value="Coca-Cola">
-              <option value="Cocoa powder">
-              <option value="Coconut rum">
-              <option value="Coffee">
-              <option value="Coffee brandy">
-              <option value="Coffee liqueur">
-              <option value="Cognac">
-              <option value="Cointreau">
-              <option value="Corona">
-              <option value="Cranberries">
-              <option value="Cranberry juice">
-              <option value="Cranberry vodka">
-              <option value="Creme de Cacao">
-              <option value="Creme de Cassis">
-              <option value="Crown Royal">
-              <option value="Dark rum">
-              <option value="demerara Sugar">
-              <option value="Dry Vermouth">
-              <option value="Dubonnet Rouge">
-              <option value="Egg">
-              <option value="Egg yolk">
-              <option value="Espresso">
-              <option value="Everclear">
-              <option value="Firewater">
-              <option value="Frangelico">
-              <option value="Fruit punch">
-              <option value="Galliano">
-              <option value="Gin">
-              <option value="Ginger">
-              <option value="Godiva liqueur">
-              <option value="Goldschlager">
-              <option value="Grand Marnier">
-              <option value="Grape juice">
-              <option value="Grape Soda">
-              <option value="Grapefruit juice">
-              <option value="Grapes">
-              <option value="Green Chartreuse">
-              <option value="Green Creme de Menthe">
-              <option value="Grenadine">
-              <option value="Guinness stout">
-              <option value="Heavy cream">
-              <option value="Hot Chocolate">
-              <option value="Hot Damn">
-              <option value="Ice">
-              <option value="Irish cream">
-              <option value="Irish whiskey">
-              <option value="Jack Daniels">
-              <option value="Jägermeister">
-              <option value="Jim Beam">
-              <option value="Johnnie Walker">
-              <option value="Kahlua">
-              <option value="Kiwi">
-              <option value="Kiwi liqueur">
-              <option value="Kool-Aid">
-              <option value="Lager">
-              <option value="Lemon">
-              <option value="Lemon juice">
-              <option value="Lemon peel">
-              <option value="Lemon vodka">
-              <option value="Lemonade">
-              <option value="Light rum">
-              <option value="Lime">
-              <option value="Lime juice">
-              <option value="Malibu rum">
-              <option value="Mango">
-              <option value="Maui">
-              <option value="Mezcal">
-              <option value="Midori melon liqueur">
-              <option value="Milk">
-              <option value="Mint">
-              <option value="Orange">
-              <option value="Orange bitters">
-              <option value="Orange juice">
-              <option value="Ouzo">
-              <option value="Peach nectar">
-              <option value="Peach Vodka">
-              <option value="Peachtree schnapps">
-              <option value="Peppermint schnapps">
-              <option value="Pineapple juice">
-              <option value="Pisco">
-              <option value="Port">
-              <option value="Prosecco">
-              <option value="Raspberry vodka">
-              <option value="Red wine">
-              <option value="Ricard">
-              <option value="Rum">
-              <option value="Rye whiskey">
-              <option value="Sambuca">
-              <option value="Scotch">
-              <option value="Sherry">
-              <option value="Sloe gin">
-              <option value="Sour mix">
-              <option value="Southern Comfort">
-              <option value="Spiced rum">
-              <option value="Sprite">
-              <option value="Strawberries">
-              <option value="Strawberry schnapps">
-              <option value="Sugar">
-              <option value="Sugar syrup">
-              <option value="Sweet Vermouth">
-              <option value="Tea">
-              <option value="Tequila">
-              <option value="Tomato juice">
-              <option value="Triple sec">
-              <option value="Vanilla ice-cream">
-              <option value="Vanilla vodka">
-              <option value="Vermouth">
-              <option value="Vodka">
-              <option value="Water">
-              <option value="Whiskey">
-              <option value="Whisky">
-              <option value="White Creme de Menthe">
-              <option value="White Rum">
-              <option value="Wild Turkey">
-              <option value="Yoghurt">
-              <option value="Yukon Jack">
-              <option value="Zima">
+      <!-- ################ KEEP CODE INSIDE THE DIV ################ -->
 
-            </datalist>
-            <h1>Ingredient Picker</h1><br>
-            <p>Find out what cocktail you can make using then ingredients you already have. Our helpful ingredient
-              picker is
-              here to help you quench your thirst.</p>
-            <br><br>
+      <div class="hide">
+        <datalist id="ingredients">
+          <option value="7-Up">
+          <option value="Absinthe">
+          <option value="Absolut Citron">
+          <option value="Absolut Kurant">
+          <option value="Absolut Vodka">
+          <option value="Advocaat">
+          <option value="Ale">
+          <option value="Amaretto">
+          <option value="Añejo rum">
+          <option value="Angelica root">
+          <option value="Apple brandy">
+          <option value="Apple cider">
+          <option value="Apple juice">
+          <option value="Applejack">
+          <option value="Apricot brandy">
+          <option value="Bacardi Limon">
+          <option value="Baileys irish cream">
+          <option value="Bailey's irish cream">
+          <option value="Banana liqueur">
+          <option value="Beer">
+          <option value="Berries">
+          <option value="Bitters">
+          <option value="Black Sambuca">
+          <option value="Blackberry brandy">
+          <option value="Blended Scotch">
+          <option value="Blended whiskey">
+          <option value="Blue Curacao">
+          <option value="Bourbon">
+          <option value="Brandy">
+          <option value="Cachaca">
+          <option value="Campari">
+          <option value="Cantaloupe">
+          <option value="Carbonated water">
+          <option value="Chambord raspberry liqueur">
+          <option value="Champagne">
+          <option value="Cherry brandy">
+          <option value="Cherry Heering">
+          <option value="Chocolate">
+          <option value="Chocolate ice-cream">
+          <option value="Chocolate liqueur">
+          <option value="Chocolate syrup">
+          <option value="Cider">
+          <option value="Coca-Cola">
+          <option value="Cocoa powder">
+          <option value="Coconut rum">
+          <option value="Coffee">
+          <option value="Coffee brandy">
+          <option value="Coffee liqueur">
+          <option value="Cognac">
+          <option value="Cointreau">
+          <option value="Corona">
+          <option value="Cranberries">
+          <option value="Cranberry juice">
+          <option value="Cranberry vodka">
+          <option value="Creme de Cacao">
+          <option value="Creme de Cassis">
+          <option value="Crown Royal">
+          <option value="Dark rum">
+          <option value="demerara Sugar">
+          <option value="Dry Vermouth">
+          <option value="Dubonnet Rouge">
+          <option value="Egg">
+          <option value="Egg yolk">
+          <option value="Espresso">
+          <option value="Everclear">
+          <option value="Firewater">
+          <option value="Frangelico">
+          <option value="Fruit punch">
+          <option value="Galliano">
+          <option value="Gin">
+          <option value="Ginger">
+          <option value="Godiva liqueur">
+          <option value="Goldschlager">
+          <option value="Grand Marnier">
+          <option value="Grape juice">
+          <option value="Grape Soda">
+          <option value="Grapefruit juice">
+          <option value="Grapes">
+          <option value="Green Chartreuse">
+          <option value="Green Creme de Menthe">
+          <option value="Grenadine">
+          <option value="Guinness stout">
+          <option value="Heavy cream">
+          <option value="Hot Chocolate">
+          <option value="Hot Damn">
+          <option value="Ice">
+          <option value="Irish cream">
+          <option value="Irish whiskey">
+          <option value="Jack Daniels">
+          <option value="Jägermeister">
+          <option value="Jim Beam">
+          <option value="Johnnie Walker">
+          <option value="Kahlua">
+          <option value="Kiwi">
+          <option value="Kiwi liqueur">
+          <option value="Kool-Aid">
+          <option value="Lager">
+          <option value="Lemon">
+          <option value="Lemon juice">
+          <option value="Lemon peel">
+          <option value="Lemon vodka">
+          <option value="Lemonade">
+          <option value="Light rum">
+          <option value="Lime">
+          <option value="Lime juice">
+          <option value="Malibu rum">
+          <option value="Mango">
+          <option value="Maui">
+          <option value="Mezcal">
+          <option value="Midori melon liqueur">
+          <option value="Milk">
+          <option value="Mint">
+          <option value="Orange">
+          <option value="Orange bitters">
+          <option value="Orange juice">
+          <option value="Ouzo">
+          <option value="Peach nectar">
+          <option value="Peach Vodka">
+          <option value="Peachtree schnapps">
+          <option value="Peppermint schnapps">
+          <option value="Pineapple juice">
+          <option value="Pisco">
+          <option value="Port">
+          <option value="Prosecco">
+          <option value="Raspberry vodka">
+          <option value="Red wine">
+          <option value="Ricard">
+          <option value="Rum">
+          <option value="Rye whiskey">
+          <option value="Sambuca">
+          <option value="Scotch">
+          <option value="Sherry">
+          <option value="Sloe gin">
+          <option value="Sour mix">
+          <option value="Southern Comfort">
+          <option value="Spiced rum">
+          <option value="Sprite">
+          <option value="Strawberries">
+          <option value="Strawberry schnapps">
+          <option value="Sugar">
+          <option value="Sugar syrup">
+          <option value="Sweet Vermouth">
+          <option value="Tea">
+          <option value="Tequila">
+          <option value="Tomato juice">
+          <option value="Triple sec">
+          <option value="Vanilla ice-cream">
+          <option value="Vanilla vodka">
+          <option value="Vermouth">
+          <option value="Vodka">
+          <option value="Water">
+          <option value="Whiskey">
+          <option value="Whisky">
+          <option value="White Creme de Menthe">
+          <option value="White Rum">
+          <option value="Wild Turkey">
+          <option value="Yoghurt">
+          <option value="Yukon Jack">
+          <option value="Zima">
 
+        </datalist>
+        <h1>Ingredient Picker</h1>
+        <p>Find out what cocktail you can make using then ingredients you already have. Our helpful ingredient
+          picker is
+          here to help you quench your thirst.</p>
 
-            <hr>
-            <figure class="figure" class="hide">
-              <img src="rum.png" width="200" height="250" class="hide"> <br>
-              <button class="btn2 btn-outline-success my-2 my-sm-0" class="hide" id="rum" type="button"
-                onclick="Rum()">Rum</button>
+        <hr>
+        <figure class="figure" class="hide">
+          <img src="rum.png" width="200" height="250" class="hide"> <br>
+          <button class="btn2 btn-outline-success my-2 my-sm-0" class="hide" id="rum" type="button"
+            onclick="Rum()">Rum</button>
 
-            </figure>
+        </figure>
 
-            <figure class="figure" class="hide">
-              <img src="vodka.png" width="200" height="250" class="hide"> <br>
-              <button class="btn2 btn-outline-success my-2 my-sm-0" class="hide" id="vodka" type="button"
-                onclick="Vodka()">Vodka</button>
+        <figure class="figure" class="hide">
+          <img src="vodka.png" width="200" height="250" class="hide"> <br>
+          <button class="btn2 btn-outline-success my-2 my-sm-0" class="hide" id="vodka" type="button"
+            onclick="Vodka()">Vodka</button>
 
-            </figure>
-            <figure class="figure" class="hide">
-              <img src="whiskey.png" width="200" height="250" class="hide"> <br>
-              <button class="btn2 btn-outline-success my-2 my-sm-0" class="hide" id="whiskey" type="button"
-                onclick="Whiskey()">Whiskey</button>
+        </figure>
+        <figure class="figure" class="hide">
+          <img src="whiskey.png" width="200" height="250" class="hide"> <br>
+          <button class="btn2 btn-outline-success my-2 my-sm-0" class="hide" id="whiskey" type="button"
+            onclick="Whiskey()">Whiskey</button>
 
-            </figure>
-            <figure class="figure" class="hide">
-              <img src="tequila.png" width="200" height="250" class="hide"> <br>
-              
-              <button class="btn2 btn-outline-success my-2 my-sm-0"  class="hide" id="tequila" type="button"
-                onclick="Tequila()">Tequila</button>
+        </figure>
+        <figure class="figure" class="hide">
+          <img src="tequila.png" width="200" height="250" class="hide"> <br>
 
-            </figure>
+          <button class="btn2 btn-outline-success my-2 my-sm-0" class="hide" id="tequila" type="button"
+            onclick="Tequila()">Tequila</button>
+
+        </figure>
 
 
-            <figure class="figure" class="hide">
-              <img src="Gin.png" width="200" height="250" class="hide"> <br>
-              <button class="btn2 btn-outline-success my-2 my-sm-0" class="hide" id="gin" type="button"
-                onclick="Gin()">Gin</button>
+        <figure class="figure" class="hide">
+          <img src="Gin.png" width="200" height="250" class="hide"> <br>
+          <button class="btn2 btn-outline-success my-2 my-sm-0" class="hide" id="gin" type="button"
+            onclick="Gin()">Gin</button>
 
-            </figure>
+        </figure>
 
 
 
 
 
-            <br><br>
+        <br><br>
 
 
-            <h1>Ingredient Picker</h1><br>
-            <p>Find out what cocktail you can make using then ingredients you already have. Our helpful ingredient
-              picker is
-              here to help you quench your thirst.</p>
-            <br><br>
+        <h1>Ingredient Picker</h1><br>
+        <p>Find out what cocktail you can make using then ingredients you already have. Our helpful ingredient
+          picker is
+          here to help you quench your thirst.</p>
+        <br><br>
 
-            <div class="container">
-              <div class="row">
-                <div class="col-sm">
-                  <form>
-                    <input list="ingredients" id="ingredient1" name="ingredient1" class="btn" placeholder="select">
-                  </form>
-                </div>
-                <div class="col-sm">
-                  <h1>First Ingredient</h1>
-                </div>
-              </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <form>
+                <input list="ingredients" id="ingredient1" name="ingredient1" class="btn" placeholder="select">
+              </form>
             </div>
-            <hr>
-            <div class="container">
-              <div class="row">
-                <div class="col-sm">
-                  <form>
-                    <input list="ingredients" id="ingredient2" name="ingredient2" class="btn" placeholder="select">
-                  </form>
-                </div>
-                <div class="col-sm">
-                  <h1>Second Ingredient</h1>
-                </div>
-              </div>
+            <div class="col-sm">
+              <h1>First Ingredient</h1>
             </div>
-            <hr>
-            <div class="container">
-              <div class="row">
-                <div class="col-sm">
-                  <form>
-                    <input list="ingredients" id="ingredient3" name="ingredient3" class="btn" placeholder="select">
-                  </form>
-                </div>
-                <div class="col-sm">
-                  <h1>Third Ingredient</h1>
-                </div>
-              </div>
-            </div>
-            <hr>
-            <div class="container">
-              <div class="row">
-                <div class="col-sm">
-                  <form>
-                    <input list="ingredients" id="ingredient4" name="ingredient4" class="btn" placeholder="select">
-                  </form>
-                </div>
-                <div class="col-sm">
-                  <h1>Fourth Ingredient</h1>
-                </div>
-              </div>
-            </div>
-            <hr>
-
-
-
-            <button class="btn btn-outline-success my-2 my-sm-0" class="hide" id="submit" class="btn" type="button"
-              onclick="callIng()">Find
-              Cocktails</button>
-
-
-          </div>
-          
-          
-          
-          <div id="rumb">
-            <img src="rum.png" width="200" height="250">
-          </div>
-          
-          <div id="vodkab">
-            <img src="vodka.png" width="200" height="250">
-          </div>
-          
-          <div id="whiskeyb">
-            <img src="whiskey.png" width="200" height="250">
-          </div>
-          
-          <div id="tequilab">
-            <img src="tequila.png" width="200" height="250">
-          </div>
-          
-          <div id="ginb">
-            <img src="gin.png" width="200" height="250">
-          </div>
-
-          <div id="root"></div>
-          <div id="root2"></div>
-          <br>
-          <br>
-
-          <button class="btn btn-outline-success my-2 my-sm-0" id="show" type="button"
-            onClick="window.location.reload()">Pick again</button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </div>
-        <!-- ################ END THE EDITABLE AREA - DO NOT EDIT OUTSIDE OF THIS AREA ################ -->
-
-        <!-- /.container -->
-
-
-        <!-- FOOTER -->
-        <div class="footer">
-          <div class="container">
-            <div class="row ">
-              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-
-                <div class="ft-logo"><img class="footer-logo" src="main-logo.png" alt=""></div>
-
-              </div>
-            </div>
-            <hr class="footer-line">
-            <div class="row ">
-              <!-- footer-about -->
-              <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 ">
-                <div class="footer-widget ">
-                  <div class="footer-title">Company</div>
-                  <ul class="list-unstyled">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="/privacy">Legal & Privacy</a></li>
-                    <li><a href="https://www.drinkaware.ie/" target='_blank'><img src="drinkaware.ie.jpg" alt="drinkaware.ie" width="200" height="30"></a></li>
-                  </ul>
-                </div>
-
-              </div>
-              <!-- /.footer-about -->
-              <!-- footer-links -->
-              <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 ">
-                <div class="footer-widget ">
-                  <div class="footer-title">Quick Links</div>
-                  <ul class="list-unstyled">
-                    <li><a href="https://thetakeout.com/tag/cocktails" target='_blank'>News</a></li>
-                    <li><a href="http://bfy.tw/NLjI" target='_blank'>Contact us</a></li>
-                    <li><a href="#">FAQ</a></li>
-                  </ul>
-
-                </div>
-              </div>
-              <!-- /.footer-links -->
-              <!-- footer-links -->
-              <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 ">
-                <div class="footer-widget ">
-                  <div class="footer-title">Social</div>
-                  <ul class="list-unstyled">
-
-                    <li><a href="https://twitter.com/intent/tweet?button_hashtag=mixedup&ref_src=twsrc%5Etfw"
-                        class="twitter-hashtag-button" data-show-count="false">Tweet #mixedup</a>
-                      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></a></li>
-                    <!--Twitter code from https://publish.twitter.com/#-->
-                    <div class="fb-like" data-href="https://www.facebook.com/NCIRL" data-layout="standard"
-                      data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                    <!--Facebook code from https://developers.facebook.com/docs/plugins/like-button-->
-                    <li><a href="https://www.instagram.com/ncirl"><img border="0" src="instagram.jpg" width="50"
-                          height="50"></a></li>
-                    <li>
-                      <div class="g-ytsubscribe" data-channel="NCIRl" data-layout="default" data-count="default"></div>
-                    </li>
-                </div>
-                <!--youtube code from https://developers.google.com/youtube/youtube_subscribe_button-->
-
-                </ul>
-              </div>
-            </div>
-            <!-- /.footer-links -->
-            <!-- footer-links -->
-            <!-- /.footer-links -->
-            <!-- tiny-footer -->
-          </div>
-          <div class="row ">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center ">
-              <div class="tiny-footer">
-                <p>Copyright © All Rights Reserved Mixed Up 2019</p>
-              </div>
-            </div>
-            <!-- /. tiny-footer -->
           </div>
         </div>
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <form>
+                <input list="ingredients" id="ingredient2" name="ingredient2" class="btn" placeholder="select">
+              </form>
+            </div>
+            <div class="col-sm">
+              <h1>Second Ingredient</h1>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <form>
+                <input list="ingredients" id="ingredient3" name="ingredient3" class="btn" placeholder="select">
+              </form>
+            </div>
+            <div class="col-sm">
+              <h1>Third Ingredient</h1>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <form>
+                <input list="ingredients" id="ingredient4" name="ingredient4" class="btn" placeholder="select">
+              </form>
+            </div>
+            <div class="col-sm">
+              <h1>Fourth Ingredient</h1>
+            </div>
+          </div>
+        </div>
+        <hr>
+
+
+
+        <button class="btn btn-outline-success my-2 my-sm-0" class="hide" id="submit" class="btn" type="button"
+          onclick="callIng()">Find
+          Cocktails</button>
+
+
       </div>
+
+
+
+      <div id="rumb">
+        <img src="rum.png" width="200" height="250">
+      </div>
+
+      <div id="vodkab">
+        <img src="vodka.png" width="200" height="250">
+      </div>
+
+      <div id="whiskeyb">
+        <img src="whiskey.png" width="200" height="250">
+      </div>
+
+      <div id="tequilab">
+        <img src="tequila.png" width="200" height="250">
+      </div>
+
+      <div id="ginb">
+        <img src="gin.png" width="200" height="250">
+      </div>
+
+      <div id="root"></div>
+      <div id="root2"></div>
+      <br>
+      <br>
+
+      <button class="btn btn-outline-success my-2 my-sm-0" id="show" type="button"
+        onClick="window.location.reload()">Pick again</button>
+
+
+        <h1>Find your local off-licence</h1>
+        <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q=off%20licence&key=AIzaSyCse9HzhmMzDI3PauzRLx3igc03CdU0Ff4" allowfullscreen></iframe>
+
+
+    </div>
+    <!-- ################ END THE EDITABLE AREA - DO NOT EDIT OUTSIDE OF THIS AREA ################ -->
+
+    <!-- /.container -->
+
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <div class="container">
+        <div class="row ">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+
+            <div class="ft-logo"><img class="footer-logo" src="main-logo.png" alt=""></div>
+
+          </div>
+        </div>
+        <hr class="footer-line">
+        <div class="row ">
+          <!-- footer-about -->
+          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 ">
+            <div class="footer-widget ">
+              <div class="footer-title">Company</div>
+              <ul class="list-unstyled">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="/privacy">Legal & Privacy</a></li>
+                <li><a href="https://www.drinkaware.ie/" target='_blank'><img src="drinkaware.ie.jpg"
+                      alt="drinkaware.ie" width="200" height="30"></a></li>
+              </ul>
+            </div>
+
+          </div>
+          <!-- /.footer-about -->
+          <!-- footer-links -->
+          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 ">
+            <div class="footer-widget ">
+              <div class="footer-title">Quick Links</div>
+              <ul class="list-unstyled">
+                <li><a href="https://thetakeout.com/tag/cocktails" target='_blank'>News</a></li>
+                <li><a href="http://bfy.tw/NLjI" target='_blank'>Contact us</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+
+            </div>
+          </div>
+          <!-- /.footer-links -->
+          <!-- footer-links -->
+          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 ">
+            <div class="footer-widget ">
+              <div class="footer-title">Social</div>
+              <ul class="list-unstyled">
+
+                <li><a href="https://twitter.com/intent/tweet?button_hashtag=mixedup&ref_src=twsrc%5Etfw"
+                    class="twitter-hashtag-button" data-show-count="false">Tweet #mixedup</a>
+                  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></a>
+                </li>
+                <!--Twitter code from https://publish.twitter.com/#-->
+                <div class="fb-like" data-href="https://www.facebook.com/NCIRL" data-layout="standard"
+                  data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                <!--Facebook code from https://developers.facebook.com/docs/plugins/like-button-->
+                <li><a href="https://www.instagram.com/ncirl"><img border="0" src="instagram.jpg" width="50"
+                      height="50"></a></li>
+                <li>
+                  <div class="g-ytsubscribe" data-channel="NCIRl" data-layout="default" data-count="default"></div>
+                </li>
+            </div>
+            <!--youtube code from https://developers.google.com/youtube/youtube_subscribe_button-->
+
+            </ul>
+          </div>
+        </div>
+        <!-- /.footer-links -->
+        <!-- footer-links -->
+        <!-- /.footer-links -->
+        <!-- tiny-footer -->
+      </div>
+      <div class="row ">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center ">
+          <div class="tiny-footer">
+            <p>Copyright © All Rights Reserved Mixed Up 2019</p>
+          </div>
+        </div>
+        <!-- /. tiny-footer -->
+      </div>
+    </div>
+    </div>
   </main>
 
 
 
   <!-- Bootstrap Dependencies-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
 
   <script src="cocktail.js"></script>
   <script src="dropdown.js"></script>

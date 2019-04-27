@@ -20,28 +20,29 @@
   <script src="hidefb.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
-<script src="https://apis.google.com/js/platform.js"></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2">
+  </script>
+  <script src="https://apis.google.com/js/platform.js"></script>
 
-    <!--FIREBASE-->
-    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: fbconfig.API_KEY,
-        authDomain: fbconfig.AUTH_DOMAIN,
-        databaseURL: fbconfig.DATABASE_URL,
-        projectId: fbconfig.PROJECT_ID,
-        storageBucket: fbconfig.STORAGE_BUCKET,
-        messagingSenderId: fbconfig.MESSAGE_SENDER_ID
-      };
+  <!--FIREBASE-->
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: fbconfig.API_KEY,
+      authDomain: fbconfig.AUTH_DOMAIN,
+      databaseURL: fbconfig.DATABASE_URL,
+      projectId: fbconfig.PROJECT_ID,
+      storageBucket: fbconfig.STORAGE_BUCKET,
+      messagingSenderId: fbconfig.MESSAGE_SENDER_ID
+    };
 
-      firebase.initializeApp(config);
-    </script>
+    firebase.initializeApp(config);
+  </script>
 
-    <script>
+  <script>
     //CHECK WHETHER USER IS LOGGED IN OR OUT
-    firebase.auth().onAuthStateChanged(function(user) {
+    firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
         //is signed in
         console.log("You're in!!");
@@ -49,49 +50,49 @@
       } else {
         //no user signed in
         console.log("You're out!!");
+        
         window.location = "/";
       }
     });
-    </script> 
+  </script>
 
   <script>
-        
-    $(document).ready(function(){
-      $("#title1").click(function(){
-      $("#pick1").toggle();
+    $(document).ready(function () {
+      $("#title1").click(function () {
+        $("#pick1").toggle();
+      });
     });
+    $(document).ready(function () {
+      $("#title2").click(function () {
+        $("#pick2").toggle();
+      });
     });
-    $(document).ready(function(){
-      $("#title2").click(function(){
-      $("#pick2").toggle();
+    $(document).ready(function () {
+      $("#title3").click(function () {
+        $("#pick3").toggle();
+      });
     });
+    $(document).ready(function () {
+      $("#title4").click(function () {
+        $("#pick4").toggle();
+      });
     });
-    $(document).ready(function(){
-      $("#title3").click(function(){
-      $("#pick3").toggle();
+    $(document).ready(function () {
+      $("#title5").click(function () {
+        $("#pick5").toggle();
+      });
     });
-    });
-    $(document).ready(function(){
-      $("#title4").click(function(){
-      $("#pick4").toggle();
-    });
-    });
-    $(document).ready(function(){
-      $("#title5").click(function(){
-      $("#pick5").toggle();
-    });
-    });
-    $(document).ready(function(){
-      $("#title6").click(function(){
-      $("#pick6").toggle();
-    });
+    $(document).ready(function () {
+      $("#title6").click(function () {
+        $("#pick6").toggle();
+      });
     });
     $(document).ready(function () {
       $("#store").click(function () {
         alert("Our store is coming very soon!");
       });
     });
-</script>
+  </script>
 
 </head>
 
@@ -132,266 +133,210 @@
   </header>
 
   <main role="main">
+      
 
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="first-slide"
-            style="background-color: #FBDA61; background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);"
-            alt="First slide">
-          <div class="container">
-            <div class="carousel-caption text-left">
-              <h1 class="quote-style">Wisdom...</h1>
-              <p class="quote-style">"This is where the body of the quote will go once linked to MongoDB"</p>
-              <p class="quote-style"><i>- Author</i></p>
-              <p><a class="btn btn-lg btn-primary" onClick="window.location.reload()" role="button">Another Quote</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="second-slide"
-            style="background-color: #FBDA61; background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);"
-            alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Sing it :)</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
-                metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" onClick="window.location.reload()" role="button">Another Quote</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="third-slide"
-            style="background-color: #FBDA61; background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);"
-            alt="Third slide">
-
-          <div class="container">
-            <div class="carousel-caption text-right">
-              <h1>Amen!!</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
-                metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" onClick="window.location.reload()" role="button">Another Quote</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
+    <div class="bannerDrinks"></div>
+    
 
 
     <!-- Marketing messaging and featurettes
         ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="containermarketing">
+    <div class="container marketing">
+        
       <!-- ################ KEEP CODE INSIDE THE DIV ################ -->
 
+      <h1>Our Top Picks</h1>
+
+      <div class="pickcards" id="title1">
+
+        <h5 id="top"><b>Market Street Julep <strong></b></h5>
+        <div id="pick1">
+          <img src="MarketStreetJulep.JPG" height="400" width="400">
+
+          <div class="picksdiv">
 
 
-      <div class="pickcards" id = "title1">
-        
-          <h5 id="top" ><b>Market Street Julep <strong></b></h5>
-            <div id = "pick1">
-          <img src="MarketStreetJulep.JPG" height="400" width= "400">
-        
-        <div class="picksdiv">
 
-          
+            <ul class="ulpicks">
+              <li>3 1" FRESH PINEAPPLE CUBES </li>
+              <li>6 MINT LEAVES </li>
+              <li>1/2 oz. SIMPLE SYRUP </li>
+              <li>2 oz. PISCO </li>
+              <li>GARNISH: 2 MINT SPRIGS</li>
+            </ul>
 
-          <ul>
-            <li>3 1" FRESH PINEAPPLE CUBES </li>
-            <li>6 MINT LEAVES </li>
-            <li>1/2 oz. SIMPLE SYRUP </li>
-            <li>2 oz. PISCO </li>
-            <li>GARNISH: 2 MINT SPRIGS</li>
-          </ul>
+            <p>In a julep cup muddle the pineapple cubes and mint leaves with
+              the simple syrup. Add the pisco and fill the glass with crushed ice.
+              Swizzle until the cup frosts, then garnish with the mint sprigs. </p>
 
-          <p>In a julep cup muddle the pineapple cubes and mint leaves with
-            the simple syrup. Add the pisco and fill the glass with crushed ice.
-            Swizzle until the cup frosts, then garnish with the mint sprigs. </p>
+
+          </div>
 
 
         </div>
 
-        
-      </div>
-        
 
       </div>
 
-      <div class="pickcards" id = "title2">
-        
-          <h5 id="top"><b>Pina Margarita <strong></b></h5>
-            <div id = "pick2">
-          <img src="pinamargarita.jpg" height="400" width= "400">
-          
-        <div class="picksdiv">
+      <div class="pickcards" id="title2">
 
-          
+        <h5 id="top"><b>Pina Margarita <strong></b></h5>
+        <div id="pick2">
+          <img src="pinamargarita.jpg" height="400" width="400">
 
-          <ul class="ulpicks">
-            <li>5 I" FRESH PINEAPPLE CUBES  </li>
-            <li>5 FRESH CILANTRO LEAVES  </li>
-            <li>12 OZ. AGAVE NECTAR </li>
-            <li>3/" OZ. FRESH LIME JUICE </li>
-            <li>1112 OZ. BLANCO TEQUILA </li>
-            <li>GARNISH: CILANTRO SPRIG</li>
-          </ul>
+          <div class="picksdiv">
 
-          <p>In a mixing glass muddle the pineapple cubes and cilantro leaves
+
+
+            <ul class="ulpicks">
+              <li>5 I" FRESH PINEAPPLE CUBES </li>
+              <li>5 FRESH CILANTRO LEAVES </li>
+              <li>12 OZ. AGAVE NECTAR </li>
+              <li>3/" OZ. FRESH LIME JUICE </li>
+              <li>1112 OZ. BLANCO TEQUILA </li>
+              <li>GARNISH: CILANTRO SPRIG</li>
+            </ul>
+
+            <p>In a mixing glass muddle the pineapple cubes and cilantro leaves
               with the agave nectar. Add the lime juice and tequila, top with ice
               cubes, cover, and shake thoroughly. Strain into an old-fashioned
-              glass filled with ice cubes and garnish with the cilantro sprig.  </p>
+              glass filled with ice cubes and garnish with the cilantro sprig. </p>
 
 
-        </div>
+          </div>
 
         </div>
 
       </div>
 
-      <div class="pickcards" id = "title3">
-        
-          <h5 id="top"><b>Tequila Smash <strong></b></h5>
-            <div id = "pick3">
-          <img src="tequilasmash.jpg" height="400" width= "400">
-        
-        <div class="picksdiv">
+      <div class="pickcards" id="title3">
 
-          
+        <h5 id="top"><b>Tequila Smash <strong></b></h5>
+        <div id="pick3">
+          <img src="tequilasmash.jpg" height="400" width="400">
 
-          <ul class="ulpicks">
-            <li>4 FRESH BLUEBERRIES </li>
-            <li>4 FRESH BING CHERRIES, PITTED  </li>
-            <li>1/2 oz. FRESH LIME JUICE </li>
-            <li>1/2 oz. MARASCHINO LIQUEUR  </li>
-            <li>2 oz. BLANCO TEQUILA  </li>
-            <li>GARNISH: LIME WHEEL, FRESH CHERRY, PITTED, AND LARGE
+          <div class="picksdiv">
+
+
+
+            <ul class="ulpicks">
+              <li>4 FRESH BLUEBERRIES </li>
+              <li>4 FRESH BING CHERRIES, PITTED </li>
+              <li>1/2 oz. FRESH LIME JUICE </li>
+              <li>1/2 oz. MARASCHINO LIQUEUR </li>
+              <li>2 oz. BLANCO TEQUILA </li>
+              <li>GARNISH: LIME WHEEL, FRESH CHERRY, PITTED, AND LARGE
                 FRESH BLUEBERRY </li>
-          </ul>
+            </ul>
 
-          <p>In a mixing gloss muddle the blueberries and 4 cherries. Add the
-              rest of the ingredients, top with ice cubes, cover, and shake thoroughly. 
+            <p>In a mixing gloss muddle the blueberries and 4 cherries. Add the
+              rest of the ingredients, top with ice cubes, cover, and shake thoroughly.
               Strain into on old-fashioned gloss filled with ice cubes and
-              garnish with the lime wheel skewered with the cherry and the blueberry.   </p>
+              garnish with the lime wheel skewered with the cherry and the blueberry. </p>
 
 
-        </div>
+          </div>
 
         </div>
 
       </div>
 
-      <div class="pickcards" id = "title4">
-        
-          <h5 id="top"><b>Melon Stand<strong></b></h5>
-            <div id = "pick4">
-          <img src="melonstand.jpg" height="400" width= "400">
-        
-        <div class="picksdiv">
+      <div class="pickcards" id="title4">
 
-          
+        <h5 id="top"><b>Melon Stand<strong></b></h5>
+        <div id="pick4">
+          <img src="melonstand.jpg" height="400" width="400">
 
-          <ul class="ulpicks">
-            <li>4 1" WATERMELON CUBES  </li>
-            <li>3/4. oz. FRESH LEMON JUICE   </li>
-            <li>'/2 oz. SIMPLE SYRUP  </li>
-            <li>'/2 oz. APEROL  </li>
-            <li>2 oz. GIN   </li>
-            <li>GARNISH: WATERMELON BALL  </li>
-          </ul>
+          <div class="picksdiv">
 
-          <p>In a mixing gloss muddle the watermelon cubes. Add the rest of
+
+
+            <ul class="ulpicks">
+              <li>4 1" WATERMELON CUBES </li>
+              <li>3/4. oz. FRESH LEMON JUICE </li>
+              <li>'/2 oz. SIMPLE SYRUP </li>
+              <li>'/2 oz. APEROL </li>
+              <li>2 oz. GIN </li>
+              <li>GARNISH: WATERMELON BALL </li>
+            </ul>
+
+            <p>In a mixing gloss muddle the watermelon cubes. Add the rest of
               the ingredients, top with ice cubes, cover, and shake thoroughly.
               Strain into a Collins gloss filled with crushed ice and garnish with
-              the watermelon boll.  </p>
+              the watermelon boll. </p>
 
 
-        </div>
+          </div>
 
         </div>
 
       </div>
 
-      <div class="pickcards" id = "title5">
-        
-          <h5 id="top"><b>Casino Royal<strong></b></h5>
-            <div id = "pick5">
-          <img src="casinoroyal.jpg" height="400" width= "400">
-        
-        <div class="picksdiv">
+      <div class="pickcards" id="title5">
 
-          
+        <h5 id="top"><b>Casino Royal<strong></b></h5>
+        <div id="pick5">
+          <img src="casinoroyal.jpg" height="400" width="400">
 
-          <ul class="ulpicks">
-            <li>1 OZ. FRESH ORANGE JUICE  </li>
-            <li>1/4 OZ. FRESH LEMON JUICE    </li>
-            <li>'12 OZ. MARASCHINO LIQUEUR   </li>
-            <li>1 OZ. GIN  </li>
-            <li>CHAMPAGNE  </li>
-            <li>GARNISH: ORANGE TWIST (OPTIONAL)   </li>
-            
-          </ul>
+          <div class="picksdiv">
 
-          <p>Combine the first four ingredients in a cocktail shaker, add ice cubes,
+
+
+            <ul class="ulpicks">
+              <li>1 OZ. FRESH ORANGE JUICE </li>
+              <li>1/4 OZ. FRESH LEMON JUICE </li>
+              <li>'12 OZ. MARASCHINO LIQUEUR </li>
+              <li>1 OZ. GIN </li>
+              <li>CHAMPAGNE </li>
+              <li>GARNISH: ORANGE TWIST (OPTIONAL) </li>
+
+            </ul>
+
+            <p>Combine the first four ingredients in a cocktail shaker, add ice cubes,
               cover, and shake thoroughly. Strain into a chilled Champagne coupe,
-              top with Champagne, and garnish with the orange twist, if using.   </p>
+              top with Champagne, and garnish with the orange twist, if using. </p>
 
 
-        </div>
+          </div>
 
         </div>
 
       </div>
 
-      <div class="pickcards" id = "title6">
-        
-          <h5 id="top"><b>Bloody Mary - Punch<strong></b></h5>
-            <div id = "pick6">
-          <img src="bloodymary.jpg" height="400" width= "400">
-        
-        <div class="picksdiv">
+      <div class="pickcards" id="title6">
 
-          
+        <h5 id="top"><b>Bloody Mary - Punch<strong></b></h5>
+        <div id="pick6">
+          <img src="bloodymary.jpg" height="400" width="400">
 
-          <ul class="ulpicks">
-            <li>EIGHT 6-0Z. CANS OR ONE 46-0Z. CAN TOMATO JUICE   </li>
-            <li>3 oz. FRESH LEMON JUICE   </li>
-            <li>4 TBSP. WORCESTERSHIRE SAUCE  </li>
-            <li>2 oz. TABASCO SAUCE  </li>
-            <li>1 TSP. KOSHER SALT  </li>
-            <li>1 TSP. GROUND BLACK PEPPER   </li>
-            <li>1 TSP. CELERY SALT </li>
-            <li>1 TSP. PREPARED HORSERADISH </li>
-            <li>18 oz. VODKA </li>
-            <li>GARNISH: CELERY STICKS </li>
-          </ul>
+          <div class="picksdiv">
 
-          <p>In a large gloss pitcher combine all of the ingredients, top with
+
+
+            <ul class="ulpicks">
+              <li>EIGHT 6-0Z. CANS OR ONE 46-0Z. CAN TOMATO JUICE </li>
+              <li>3 oz. FRESH LEMON JUICE </li>
+              <li>4 TBSP. WORCESTERSHIRE SAUCE </li>
+              <li>2 oz. TABASCO SAUCE </li>
+              <li>1 TSP. KOSHER SALT </li>
+              <li>1 TSP. GROUND BLACK PEPPER </li>
+              <li>1 TSP. CELERY SALT </li>
+              <li>1 TSP. PREPARED HORSERADISH </li>
+              <li>18 oz. VODKA </li>
+              <li>GARNISH: CELERY STICKS </li>
+            </ul>
+
+            <p>In a large gloss pitcher combine all of the ingredients, top with
               ice cubes, and stir thoroughly. Strain into a punch bowl and odd a
               large block of ice. Serve in highball glosses filled with ice cubes and
-              garnish each with a celery stick.   </p>
+              garnish each with a celery stick. </p>
 
+
+          </div>
 
         </div>
-
-      </div>
 
       </div>
 
@@ -410,7 +355,7 @@
       <div class="container">
         <div class="row ">
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-            <div class="ft-logo"><img class="footer-logo" src="images/main-logo.png" alt=""></div>
+            <div class="ft-logo"><img class="footer-logo" src="main-logo.png" alt=""></div>
           </div>
         </div>
         <hr class="footer-line">
@@ -423,7 +368,8 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">Support</a></li>
                 <li><a href="/privacy">Legal & Privacy</a></li>
-                <li><a href="https://www.drinkaware.ie/" target='_blank'><img src="drinkaware.ie.jpg" alt="drinkaware.ie" width="200" height="30"></a></li>
+                <li><a href="https://www.drinkaware.ie/" target='_blank'><img src="drinkaware.ie.jpg"
+                      alt="drinkaware.ie" width="200" height="30"></a></li>
               </ul>
             </div>
           </div>
@@ -446,17 +392,24 @@
               <div class="footer-title">Social</div>
               <ul class="list-unstyled">
 
-                <li><a href="https://twitter.com/intent/tweet?button_hashtag=mixedup&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #mixedup</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></a></li>
+                <li><a href="https://twitter.com/intent/tweet?button_hashtag=mixedup&ref_src=twsrc%5Etfw"
+                    class="twitter-hashtag-button" data-show-count="false">Tweet #mixedup</a>
+                  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></a>
+                </li>
                 <!--Twitter code from https://publish.twitter.com/#-->
-                <div class="fb-like" data-href="https://www.facebook.com/NCIRL" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                <div class="fb-like" data-href="https://www.facebook.com/NCIRL" data-layout="standard"
+                  data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                 <!--Facebook code from https://developers.facebook.com/docs/plugins/like-button-->
 
-                <li><a href="https://www.instagram.com/ncirl"><img border="0" src="instagram.jpg" width="50" height="50"></li>
-                <li><div class="g-ytsubscribe" data-channel="NCIRl" data-layout="default" data-count="default"></div></li>
+                <li><a href="https://www.instagram.com/ncirl"><img border="0" src="instagram.jpg" width="50"
+                      height="50"></li>
+                <li>
+                  <div class="g-ytsubscribe" data-channel="NCIRl" data-layout="default" data-count="default"></div>
+                </li>
 
-                 <!--youtube code from https://developers.google.com/youtube/youtube_subscribe_button-->
+                <!--youtube code from https://developers.google.com/youtube/youtube_subscribe_button-->
 
-            </ul>
+              </ul>
             </div>
           </div>
           <!-- /.footer-links -->
@@ -480,14 +433,14 @@
 
   <!-- Bootstrap Dependencies-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
 
 
 
