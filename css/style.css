@@ -466,10 +466,27 @@ figure img {
 .layout {
   margin: auto;
   width: 60%;
-  font-style: oblique;
-  font-size: 30px;
-  color: #ff4da6;
-  box-shadow: 0 4px 8px 0 rgb(172, 221, 107)
+  font-style: italic;
+  font-size: 20px;
+  color: #D0329F;
+  box-shadow: 0 10px 10px 0 rgb(172, 221, 107);
+  padding: 15px 15px;
+  
+  
+  
+}
+
+.rdmHead{
+  text-align: center;
+  font-style: normal;
+  color: black;
+
+
+}
+
+
+.rdmButton{
+  text-align: center;
   
 }
 
