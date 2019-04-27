@@ -52,6 +52,11 @@
       $("#pick6").toggle();
     });
     });
+    $(document).ready(function () {
+      $("#store").click(function () {
+        alert("Our store is coming very soon!");
+      });
+    });
 </script>
 
 </head>
@@ -59,7 +64,7 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-light">
-      <a class="navbar-brand" href="#"><img class="logo" src="main-logo.png" alt="main-logo"></a>
+      <a class="navbar-brand" href="/home"><img class="logo" src="main-logo.png" alt="main-logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -76,13 +81,13 @@
             <a class="nav-link" href="/drinks">Cocktail Finder</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Random Cocktail</a>
+            <a class="nav-link" href="/randomgen">Random Cocktail</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/games">Games</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Store (Coming Soon)</a>
+            <a class="nav-link" href="#" id="store">Store (Coming Soon)</a>
           </li>
         </ul>
         <form class="form-inline mt-2 mt-md-0">
@@ -206,7 +211,7 @@
 
           
 
-          <ul>
+          <ul class="ulpicks">
             <li>5 I" FRESH PINEAPPLE CUBES  </li>
             <li>5 FRESH CILANTRO LEAVES  </li>
             <li>12 OZ. AGAVE NECTAR </li>
@@ -237,7 +242,7 @@
 
           
 
-          <ul>
+          <ul class="ulpicks">
             <li>4 FRESH BLUEBERRIES </li>
             <li>4 FRESH BING CHERRIES, PITTED  </li>
             <li>1/2 oz. FRESH LIME JUICE </li>
@@ -269,7 +274,7 @@
 
           
 
-          <ul>
+          <ul class="ulpicks">
             <li>4 1" WATERMELON CUBES  </li>
             <li>3/4. oz. FRESH LEMON JUICE   </li>
             <li>'/2 oz. SIMPLE SYRUP  </li>
@@ -300,7 +305,7 @@
 
           
 
-          <ul>
+          <ul class="ulpicks">
             <li>1 OZ. FRESH ORANGE JUICE  </li>
             <li>1/4 OZ. FRESH LEMON JUICE    </li>
             <li>'12 OZ. MARASCHINO LIQUEUR   </li>
@@ -331,7 +336,7 @@
 
           
 
-          <ul>
+          <ul class="ulpicks">
             <li>EIGHT 6-0Z. CANS OR ONE 46-0Z. CAN TOMATO JUICE   </li>
             <li>3 oz. FRESH LEMON JUICE   </li>
             <li>4 TBSP. WORCESTERSHIRE SAUCE  </li>
@@ -384,6 +389,7 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">Support</a></li>
                 <li><a href="/privacy">Legal & Privacy</a></li>
+                <li><a href="https://www.drinkaware.ie/" target='_blank'><img src="drinkaware.ie.jpg" alt="drinkaware.ie" width="200" height="30"></a></li>
               </ul>
             </div>
           </div>
@@ -410,7 +416,7 @@
                 <!--Twitter code from https://publish.twitter.com/#-->
                 <div class="fb-like" data-href="https://www.facebook.com/NCIRL" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                 <!--Facebook code from https://developers.facebook.com/docs/plugins/like-button-->
-                <li><a href="https://www.instagram.com/ncirl"><img border="0" src="instagram.jpg" width="50" height="50"></li>
+                <li><a href="https://www.instagram.com/ncirl"><img border="0" src="instagram.jpg" width="50" height="50"></a></li>
                 <li><div class="g-ytsubscribe" data-channel="NCIRl" data-layout="default" data-count="default"></div></li></div>
                  <!--youtube code from https://developers.google.com/youtube/youtube_subscribe_button-->
 
