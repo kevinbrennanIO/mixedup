@@ -6,11 +6,13 @@ var app = express();                           // now we need to declare our app
 require('dotenv').config(); 
 const path  = require('path');
 const VIEWS = path.join(__dirname, "views");
+
 app.use(express.static("css"));
 app.use(express.static("images"));
 app.use(express.static("scripts"));
+
 app.set("view engine", "ejs");
-app.use(express.static("scripts"));
+
 
 var mysql = require('mysql');
 const http = require('http');

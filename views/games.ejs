@@ -5,6 +5,25 @@
     <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
 <script src="https://apis.google.com/js/platform.js"></script>
+<script>
+    
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  // document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 
 
 
@@ -27,12 +46,17 @@
       $(this).toggle();
     });
     });
+    $(document).ready(function () {
+      $("#store").click(function () {
+        alert("Our store is coming very soon!");
+      });
+    });
     </script>
 </head>
 <body>
   <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-light">
-        <a class="navbar-brand" href="#"><img class="logo" src="main-logo.png" alt="main-logo"></a>
+        <a class="navbar-brand" href="/home"><img class="logo" src="main-logo.png" alt="main-logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,13 +72,13 @@
               <a class="nav-link" href="/drinks">Cocktail Finder</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Random Cocktail</a>
+              <a class="nav-link" href="/randomgen">Random Cocktail</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/games">Games</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Store (Coming Soon)</a>
+              <a class="nav-link" href="#" id="store">Store (Coming Soon)</a>
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
@@ -173,6 +197,7 @@
                                 <li><a href="https://thetakeout.com/tag/cocktails" target='_blank'>About</a></li>
                                 <li><a href="#">Support</a></li>
                                 <li><a href="/privacy">Legal & Privacy</a></li>
+                                <li><a href="https://www.drinkaware.ie/" target='_blank'><img src="drinkaware.ie.jpg" alt="drinkaware.ie" width="200" height="30"></a></li>
                             </ul>
                         </div>
                     </div>
@@ -199,8 +224,10 @@
                               <!--Twitter code from https://publish.twitter.com/#-->
                               <div class="fb-like" data-href="https://www.facebook.com/NCIRL" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                               <!--Facebook code from https://developers.facebook.com/docs/plugins/like-button-->
+
                               <li><a href="https://www.instagram.com/ncirl"><img border="0" src="instagram.jpg" width="50" height="50"></li>
                               <li><div class="g-ytsubscribe" data-channel="NCIRl" data-layout="default" data-count="default"></div></li>
+
                                <!--youtube code from https://developers.google.com/youtube/youtube_subscribe_button-->
 
                           </ul>
@@ -230,7 +257,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 </body>
 </html>
